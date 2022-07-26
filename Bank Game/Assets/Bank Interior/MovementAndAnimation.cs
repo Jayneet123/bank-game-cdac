@@ -16,6 +16,9 @@ public class MovementAndAnimation : MonoBehaviour
     float rotationFactorPerFrame = 15.0f;
     public GameObject canvas;
 
+    public GameObject mainCam;
+    public GameObject cam2;
+
     //runs before the start function
     void Awake(){
         playerInput = new PlayerInput();
@@ -77,7 +80,10 @@ public class MovementAndAnimation : MonoBehaviour
     void OnControllerColliderHit(ControllerColliderHit hit){
         if (hit.gameObject.CompareTag("Desk")){
             canvas.SetActive(true);
+            mainCam.SetActive(false);
+            cam2.SetActive(true);
             OnDisable();
+            
         }
     }
     
