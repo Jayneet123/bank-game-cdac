@@ -8,18 +8,21 @@ public class NewDialogueManager : MonoBehaviour
     [SerializeField] private float typingSpeed = 0.05f;
 
     [SerializeField] private bool PlayerSpeakingFirst;
-    [SerializeField] private TextMeshPro playerDialogueText;
-    [SerializeField] private TextMeshProUGUI nCPDialogueText;
+
+    [SerializeField] private TextMeshProUGUI playerDialogueText;
+    [SerializeField] private TextMeshProUGUI nPCDialogueText;
 
     [SerializeField] private string[] playerDialogueSentences;
-    [SerializeField] private string[] nCPDialogueSentences;
+    [SerializeField] private string[] nPCDialogueSentences;
 
     [SerializeField] private GameObject playerContinueButton;
     [SerializeField] private GameObject nPCContinueButton;
 
     private int playerIndex;
     private int nPCIndex;
-     private void Start(){
+
+
+    private void Start(){
         StartDialogue();
      }
 
@@ -32,18 +35,17 @@ public class NewDialogueManager : MonoBehaviour
         {
             StartCoroutine(TypeNPCDialogue());
         }
-
-        
-        
     }
 
     private IEnumerator TypePlayerDialogue()
     {
-        foreach(char  letter in playerDialogueSentences[playerIndex].ToCharArray())
+        foreach(char letter in playerDialogueSentences[playerIndex].ToCharArray())
         {
             playerDialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+
+        playerContinueButton.SetActive(true);
     }
 
     private IEnumerator TypeNPCDialogue()
@@ -53,5 +55,7 @@ public class NewDialogueManager : MonoBehaviour
             nPCDialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+
+        nPCContinueButton.SetActive(true);
     }
 }
