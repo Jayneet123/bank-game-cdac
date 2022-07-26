@@ -14,6 +14,7 @@ public class MovementAndAnimation : MonoBehaviour
     Vector3 currentMovement;
     bool isMovementPressed; 
     float rotationFactorPerFrame = 15.0f;
+    public GameObject canvas;
 
     //runs before the start function
     void Awake(){
@@ -60,6 +61,7 @@ public class MovementAndAnimation : MonoBehaviour
 
     void Update()
     {
+        
         handleRotation();
         handleAnimation();
         characterController.Move(currentMovement* Time.deltaTime);
@@ -74,6 +76,7 @@ public class MovementAndAnimation : MonoBehaviour
     }   
     void OnControllerColliderHit(ControllerColliderHit hit){
         if (hit.gameObject.CompareTag("Desk")){
+            canvas.SetActive(true);
             OnDisable();
         }
     }
