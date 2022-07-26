@@ -80,6 +80,7 @@ public class MovementAndAnimation : MonoBehaviour
     void OnControllerColliderHit(ControllerColliderHit hit){
         if (hit.gameObject.CompareTag("Desk")){
             canvas.SetActive(true);
+            // To disable camera 
             mainCam.SetActive(false);
             cam2.SetActive(true);
             OnDisable();
