@@ -36,6 +36,7 @@ public class UserAccountManager : MonoBehaviour
         },
         result => {
                 Debug.Log($"Successful Account Login for {username}");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             },
         error => {
                 Debug.Log($"Unsuccessful Account Login for {username}\n {error.GenerateErrorReport()}");
