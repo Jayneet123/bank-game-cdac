@@ -1,13 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class login : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Selectable firstInput; 
     void Start()
     {
-        
+        firstInput.Select();
     }
 
     // Update is called once per frame
