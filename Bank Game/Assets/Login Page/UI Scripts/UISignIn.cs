@@ -13,6 +13,7 @@ public class UISignIn : MonoBehaviour
     public void UpdatePassword (string _password){
         password = _password;
     }
+
     public void SignIn(){
         UserAccountManager.Instance.SignIn(username,password);
     }

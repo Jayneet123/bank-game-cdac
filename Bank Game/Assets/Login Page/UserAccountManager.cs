@@ -4,13 +4,16 @@ using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UserAccountManager : MonoBehaviour
 {
+    public Canvas options;
     public static UserAccountManager Instance;
 
     void Awake(){
         Instance = this;
+        
     }
 
     public void CreateAccount(string emailAddress,string username,string password){
