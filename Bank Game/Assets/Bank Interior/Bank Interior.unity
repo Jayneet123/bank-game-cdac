@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -323,6 +323,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 111779478}
+  - component: {fileID: 111779479}
   - component: {fileID: 111779477}
   m_Layer: 0
   m_Name: PlayerSpeechBubble
@@ -390,15 +391,35 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111779476}
-  m_LocalRotation: {x: -0, y: 0.6549542, z: -0, w: 0.75566864}
-  m_LocalPosition: {x: 10.37, y: 2.32, z: 46.44}
-  m_LocalScale: {x: 0.5058771, y: 0.5242654, z: 0.12496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1007766774}
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 506178539}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 81.832, z: 0}
+--- !u!95 &111779479
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111779476}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 71a161db6fff49b4e920632e2fcfcfa7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &153152851
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +482,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 153152853}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 816514311}
+        m_TargetAssemblyTypeName: NewDialogueManager, Assembly-CSharp
+        m_MethodName: TriggerContinuePlayerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &153152853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,6 +685,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &506178538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 506178539}
+  - component: {fileID: 506178540}
+  m_Layer: 0
+  m_Name: PlayerSpecchBubbleContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &506178539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506178538}
+  m_LocalRotation: {x: -0, y: 0.6549542, z: -0, w: 0.75566864}
+  m_LocalPosition: {x: 10.37, y: 3.07, z: 46.85}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 111779478}
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &506178540
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506178538}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d87e298433d07d45b5b88e9029f2768, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &721370317
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,12 +998,14 @@ MonoBehaviour:
   PlayerSpeakingFirst: 1
   playerDialogueText: {fileID: 1980113313}
   nPCDialogueText: {fileID: 1803691442}
+  playerSpeechBubbleAnimator: {fileID: 111779479}
+  nPCSpeechBubbleAnimator: {fileID: 1675739211}
   playerDialogueSentences:
   - 'Hey there '
   - I am Raj
   nPCDialogueSentences:
   - Heyyy
-  - I am mikka pagal
+  - I am mikka
   playerContinueButton: {fileID: 872330043}
   nPCContinueButton: {fileID: 153152851}
 --- !u!4 &816514312
@@ -1003,7 +1091,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4280164061
-  m_fontColor: {r: 0.8679245, g: 0.118725546, b: 0.118725546, a: 1}
+  m_fontColor: {r: 0.9150943, g: 0.10791205, b: 0.10791205, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1097,7 +1185,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872330043}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.4}
+  m_LocalPosition: {x: 0, y: 0, z: 0.8}
   m_LocalScale: {x: 0.24468753, y: 0.26483205, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1107,7 +1195,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.4, y: 12.9900055}
+  m_AnchoredPosition: {x: -7.3, y: 13.5}
   m_SizeDelta: {x: 25, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &872330045
@@ -1153,7 +1241,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 872330046}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 816514311}
+        m_TargetAssemblyTypeName: NewDialogueManager, Assembly-CSharp
+        m_MethodName: TriggerContinueNPCDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &872330046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1749,7 +1849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4293159f56d94e6479f88ad34e579598, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 47.98
+      value: 48.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4293159f56d94e6479f88ad34e579598, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2854,6 +2954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1675739209}
+  - component: {fileID: 1675739211}
   - component: {fileID: 1675739210}
   m_Layer: 0
   m_Name: NPCSpeechBubble
@@ -2869,14 +2970,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675739208}
-  m_LocalRotation: {x: -0, y: 0.6549542, z: -0, w: 0.75566864}
-  m_LocalPosition: {x: 10.37, y: 2.56, z: 48.25}
-  m_LocalScale: {x: 0.5058771, y: 0.5242654, z: 0.12496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1909185631}
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 1989974657}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 81.832, z: 0}
 --- !u!212 &1675739210
 SpriteRenderer:
@@ -2930,6 +3031,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!95 &1675739211
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675739208}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 71a161db6fff49b4e920632e2fcfcfa7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1791844156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3026,7 +3147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.41364238, y: 0.63014466}
   m_AnchorMax: {x: 0.41364238, y: 0.66800004}
-  m_AnchoredPosition: {x: 16.3, y: 4.5}
+  m_AnchoredPosition: {x: 16.6, y: 4.5}
   m_SizeDelta: {x: 200, y: 46.219128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1803691441
@@ -3597,6 +3718,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980113311}
   m_CullTransparentMesh: 1
+--- !u!1 &1989974656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1989974657}
+  - component: {fileID: 1989974658}
+  m_Layer: 0
+  m_Name: NPCSpeechBubbleContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1989974657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989974656}
+  m_LocalRotation: {x: -0, y: 0.6549542, z: -0, w: 0.75566864}
+  m_LocalPosition: {x: 10.37, y: 2.78, z: 48.33}
+  m_LocalScale: {x: 0.5058772, y: 0.5242654, z: 0.12496}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1675739209}
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1989974658
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989974656}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9db27d07bb94874408c317bb30298be5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2113542676
 GameObject:
   m_ObjectHideFlags: 0
