@@ -4,13 +4,19 @@ using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UserAccountManager : MonoBehaviour
 {
+    public Canvas options;
+    public Canvas signIn;
+    public Canvas createAccount;
+    public Button signInButton;
     public static UserAccountManager Instance;
 
     void Awake(){
         Instance = this;
+        
     }
 
     public void CreateAccount(string emailAddress,string username,string password){
@@ -22,7 +28,12 @@ public class UserAccountManager : MonoBehaviour
             },
             result => {
                 Debug.Log($"Successful Account Creation for {username} and {emailAddress}");
-                SignIn(username,password);
+                // SignIn(username,password);
+                createAccount.enabled = false;
+                signIn.enabled = true;
+                // UISignIn.Instance1.UpdateUsername(username);
+                // UISignIn.Instance1.UpdatePassword(password);
+                // UISignIn.Instance1.SignIn();
             },
             error => {
                 Debug.Log($"Unsuccessful Account Creation for {username} and {emailAddress}\n {error.GenerateErrorReport()}");

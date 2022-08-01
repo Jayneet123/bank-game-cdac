@@ -6,6 +6,11 @@ using UnityEngine.UI;
 public class UISignIn : MonoBehaviour
 {
     string username , password;
+    public static UISignIn Instance1;
+
+    void Awake(){
+        Instance1 = this;
+    }
 
     public void UpdateUsername (string _username){
         username = _username;
@@ -13,6 +18,7 @@ public class UISignIn : MonoBehaviour
     public void UpdatePassword (string _password){
         password = _password;
     }
+
     public void SignIn(){
         UserAccountManager.Instance.SignIn(username,password);
     }

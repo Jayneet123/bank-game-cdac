@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:33cfb6410ab679bf4696518e5afd7b03c3670cd84ba17454ef1c3419c60984b0
-size 471
+fileFormatVersion: 2
+guid: f1cc266d46db3d94f894aeb055a528d1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Roboto
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

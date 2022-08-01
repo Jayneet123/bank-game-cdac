@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0f7b1836d7b19b126c893473fb48eeb6d039f60aaff01fc11ec05d1d614a06a1
-size 1188
+fileFormatVersion: 2
+guid: 9eb068abe4628ea4a999d7f8856d64d8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Roboto
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e79918b80cf5dba4689b8bd1d41095a4, type: 3}
+  - {fileID: 12800000, guid: 1ee6515849c0b86418d3a34085eba784, type: 3}
+  - {fileID: 12800000, guid: 9def50044d47bc54689ee76f076475ab, type: 3}
+  - {fileID: 12800000, guid: f1cc266d46db3d94f894aeb055a528d1, type: 3}
+  - {fileID: 12800000, guid: b2fc8dda186f7d145aa71f6b9f8010d5, type: 3}
+  - {fileID: 12800000, guid: 8df7342658409704db296b727be3c82d, type: 3}
+  - {fileID: 12800000, guid: 1d2ee9ae84adc084a8fe3949ec6f9abd, type: 3}
+  - {fileID: 12800000, guid: 5bb5ec040b395dd45a3d929cc1b3c6fa, type: 3}
+  - {fileID: 12800000, guid: 9455de61d59d39b4b9c7988484e90c19, type: 3}
+  - {fileID: 12800000, guid: 94fcef7f3f02f1448bb17e455bb58e3c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
