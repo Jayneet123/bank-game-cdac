@@ -68,17 +68,17 @@ public class NewDialogueManager : MonoBehaviour
 
         nPCContinueButton.SetActive(true);
     }
-    private IEnumerator ContinuePlayerDialogue()
+    public void ContinuePlayerDialogue()
     {
-        nPCDialogueText.text = string.Empty;
-        nPCSpeechBubbleAnimator.SetTrigger("Close");
-        yield return  new WaitForSeconds(speechBubbleAnimationDelay);
+        // nPCDialogueText.text = string.Empty;
+        // nPCSpeechBubbleAnimator.SetTrigger("Close");
+        // yield return  new WaitForSeconds(speechBubbleAnimationDelay);
         
-        playerDialogueText.text = string.Empty;
-        playerSpeechBubbleAnimator.SetTrigger("Open");
-        yield return  new WaitForSeconds(speechBubbleAnimationDelay);
+        // playerDialogueText.text = string.Empty;
+        // playerSpeechBubbleAnimator.SetTrigger("Open");
+        // yield return  new WaitForSeconds(speechBubbleAnimationDelay);
 
-        nPCContinueButton.SetActive(false);
+        // nPCContinueButton.SetActive(false);
         if(playerIndex < playerDialogueSentences.Length - 1)
         {
             if(dialogueStarted)
@@ -90,16 +90,16 @@ public class NewDialogueManager : MonoBehaviour
             StartCoroutine(TypePlayerDialogue());
         }
     }
-    public IEnumerator ContinueNPCDialogue()
+    public void ContinueNPCDialogue()
     {
-        playerDialogueText.text = string.Empty;
-        playerSpeechBubbleAnimator.SetTrigger("Close");
-        yield return  new WaitForSeconds(speechBubbleAnimationDelay);
+        // playerDialogueText.text = string.Empty;
+        // playerSpeechBubbleAnimator.SetTrigger("Close");
+        // yield return  new WaitForSeconds(speechBubbleAnimationDelay);
 
-        nPCDialogueText.text = string.Empty;
-        nPCSpeechBubbleAnimator.SetTrigger("Open");
-        yield return  new WaitForSeconds(speechBubbleAnimationDelay);
-        playerContinueButton.SetActive(false);
+        // nPCDialogueText.text = string.Empty;
+        // nPCSpeechBubbleAnimator.SetTrigger("Open");
+        // yield return  new WaitForSeconds(speechBubbleAnimationDelay);
+        // playerContinueButton.SetActive(false);
         if(nPCIndex < nPCDialogueSentences.Length - 1)
         {
             if(dialogueStarted)
@@ -112,11 +112,11 @@ public class NewDialogueManager : MonoBehaviour
         }
     }
 
-    public void TriggerContinuePlayerDialogue(){
-        StartCoroutine(ContinuePlayerDialogue());
-    }
+    // public void TriggerContinuePlayerDialogue(){
+    //     StartCoroutine(ContinuePlayerDialogue());
+    // }
 
-    public void TriggerContinueNPCDialogue(){
-      StartCoroutine(ContinueNPCDialogue());
-    }
+    // public void TriggerContinueNPCDialogue(){
+    //     StartCoroutine(ContinueNPCDialogue());
+    // }
 }
