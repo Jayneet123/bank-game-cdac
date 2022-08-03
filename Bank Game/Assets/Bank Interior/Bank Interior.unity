@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1185,7 +1185,7 @@ GameObject:
   - component: {fileID: 477784729}
   - component: {fileID: 477784728}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: PlayerSpeechBubbleText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1427,7 +1427,7 @@ GameObject:
   - component: {fileID: 724869651}
   - component: {fileID: 724869650}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: PlayerSpeechBubbleCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1943,8 +1943,8 @@ MonoBehaviour:
   PlayerSpeakingFirst: 1
   playerDialogueText: {fileID: 477784728}
   nPCDialogueText: {fileID: 850609816}
-  playerSpeechBubbleAnimator: {fileID: 111779479}
-  nPCSpeechBubbleAnimator: {fileID: 1675739211}
+  playerSpeechBubbleAnimator: {fileID: 1890118206}
+  nPCSpeechBubbleAnimator: {fileID: 1836384707}
   playerDialogueSentences:
   - 'Hey there '
   - I am Raj
@@ -2200,7 +2200,7 @@ GameObject:
   - component: {fileID: 850609817}
   - component: {fileID: 850609816}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: NPCSpeechBubbleText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2643,6 +2643,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 70, z: 0}
+--- !u!1 &912012830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 912012831}
+  m_Layer: 0
+  m_Name: PlayerSpeechBubbleContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &912012831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912012830}
+  m_LocalRotation: {x: -0, y: 0.6852831, z: -0, w: 0.7282768}
+  m_LocalPosition: {x: 11.99, y: 2.12, z: 44.61}
+  m_LocalScale: {x: 0.48540005, y: 0.7224, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1890118205}
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &916378615
 GameObject:
   m_ObjectHideFlags: 0
@@ -3436,7 +3468,7 @@ GameObject:
   - component: {fileID: 1063748127}
   - component: {fileID: 1063748126}
   m_Layer: 0
-  m_Name: Button
+  m_Name: NPCSpeechBubbleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3509,7 +3541,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 816514311}
         m_TargetAssemblyTypeName: NewDialogueManager, Assembly-CSharp
-        m_MethodName: ContinuePlayerDialogue
+        m_MethodName: TriggerContinuePlayerDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4860,7 +4892,7 @@ GameObject:
   - component: {fileID: 1531104586}
   - component: {fileID: 1531104585}
   m_Layer: 0
-  m_Name: Button
+  m_Name: PlayerSpeechBubbleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4933,7 +4965,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 816514311}
         m_TargetAssemblyTypeName: NewDialogueManager, Assembly-CSharp
-        m_MethodName: ContinueNPCDialogue
+        m_MethodName: TriggerContinueNPCDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5090,6 +5122,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a97991dbf5d5a046af13e2f5fcb0dcb, type: 3}
+--- !u!1 &1647454518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1647454519}
+  m_Layer: 0
+  m_Name: NPCSpeechBubbleContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1647454519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647454518}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 12, y: 1.97, z: 47.65}
+  m_LocalScale: {x: 0.4854001, y: 0.7224, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1836384706}
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1655112317
 GameObject:
   m_ObjectHideFlags: 0
@@ -5672,8 +5736,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1836384706}
   - component: {fileID: 1836384705}
+  - component: {fileID: 1836384707}
   m_Layer: 0
-  m_Name: npc
+  m_Name: NPCSpeechBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5738,15 +5803,35 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836384704}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 12, y: 1.97, z: 47.65}
-  m_LocalScale: {x: 0.4854, y: 0.7224, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1997351426}
-  m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_Father: {fileID: 1647454519}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!95 &1836384707
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836384704}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 71a161db6fff49b4e920632e2fcfcfa7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1890118203
 GameObject:
   m_ObjectHideFlags: 0
@@ -5757,8 +5842,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1890118205}
   - component: {fileID: 1890118204}
+  - component: {fileID: 1890118206}
   m_Layer: 0
-  m_Name: player
+  m_Name: PlayerSpeechBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5823,15 +5909,35 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890118203}
-  m_LocalRotation: {x: -0, y: 0.6852831, z: -0, w: 0.7282768}
-  m_LocalPosition: {x: 11.99, y: 2.12, z: 44.61}
-  m_LocalScale: {x: 0.4854, y: 0.7224, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 724869649}
-  m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_Father: {fileID: 912012831}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 86.516, z: 0}
+--- !u!95 &1890118206
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890118203}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 71a161db6fff49b4e920632e2fcfcfa7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1909185630
 GameObject:
   m_ObjectHideFlags: 0
@@ -6491,7 +6597,7 @@ GameObject:
   - component: {fileID: 1997351428}
   - component: {fileID: 1997351427}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: NPCSpeechBubbleCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
