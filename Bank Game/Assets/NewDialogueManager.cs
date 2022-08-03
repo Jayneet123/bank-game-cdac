@@ -36,13 +36,13 @@ public class NewDialogueManager : MonoBehaviour
     {
         if (PlayerSpeakingFirst){
             playerSpeechBubbleAnimator.SetTrigger("Open");
-            yield return  new WaitForSeconds(speechBubbleAnimationDelay);
+            yield return new WaitForSeconds(speechBubbleAnimationDelay);
             StartCoroutine(TypePlayerDialogue());
         }
         else
         {
             nPCSpeechBubbleAnimator.SetTrigger("Open");
-            yield return  new WaitForSeconds(speechBubbleAnimationDelay);
+            yield return new WaitForSeconds(speechBubbleAnimationDelay);
             StartCoroutine(TypeNPCDialogue());
         }
     }
