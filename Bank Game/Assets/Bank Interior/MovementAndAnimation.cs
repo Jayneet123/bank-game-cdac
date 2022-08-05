@@ -18,6 +18,7 @@ public class MovementAndAnimation : MonoBehaviour
 
     public GameObject mainCam;
     public GameObject cam2;
+    public GameObject newDialogueManager;
 
     //runs before the start function
     void Awake(){
@@ -84,7 +85,7 @@ public class MovementAndAnimation : MonoBehaviour
             mainCam.SetActive(false);
             cam2.SetActive(true);
             OnDisable();
-            
+            newDialogueManager.SetActive(true);
         }
     }
     

@@ -14,7 +14,7 @@ public class NewDialogueManager : MonoBehaviour
     [Header("Animation Controllers")]
     [SerializeField] private Animator playerSpeechBubbleAnimator;
     [SerializeField] private Animator nPCSpeechBubbleAnimator;
-    // [Header("Dialogue Sentences")]
+    [Header("Dialogue Sentences")]
     [SerializeField] private string[] playerDialogueSentences;
     [SerializeField] private string[] nPCDialogueSentences;
 
@@ -22,10 +22,11 @@ public class NewDialogueManager : MonoBehaviour
     [SerializeField] private GameObject playerContinueButton;
     [SerializeField] private GameObject nPCContinueButton;
     private bool dialogueStarted;
+    // private bool playerSpeak = true;
 
     private int playerIndex;
     private int nPCIndex;
-    private float speechBubbleAnimationDelay = 0.6f;
+    private float speechBubbleAnimationDelay = 0.02f;
 
 
     private void Start(){
@@ -49,9 +50,9 @@ public class NewDialogueManager : MonoBehaviour
 
     private IEnumerator TypePlayerDialogue()
     {
-        foreach(char letter in playerDialogueSentences[playerIndex].ToCharArray())
+        foreach(char letter1 in playerDialogueSentences[playerIndex].ToCharArray())
         {
-            playerDialogueText.text += letter;
+            playerDialogueText.text += letter1;
             yield return new WaitForSeconds(typingSpeed);
         }
 
@@ -60,7 +61,7 @@ public class NewDialogueManager : MonoBehaviour
 
     private IEnumerator TypeNPCDialogue()
     {
-        foreach(char  letter in nPCDialogueSentences[nPCIndex].ToCharArray())
+        foreach(char letter in nPCDialogueSentences[nPCIndex].ToCharArray())
         {
             nPCDialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
@@ -70,6 +71,7 @@ public class NewDialogueManager : MonoBehaviour
     }
     private IEnumerator ContinuePlayerDialogue()
     {
+        nPCContinueButton.SetActive(false);
         nPCDialogueText.text = string.Empty;
         nPCSpeechBubbleAnimator.SetTrigger("Close");
         yield return new WaitForSeconds(speechBubbleAnimationDelay);
@@ -78,7 +80,6 @@ public class NewDialogueManager : MonoBehaviour
         playerSpeechBubbleAnimator.SetTrigger("Open");
         yield return new WaitForSeconds(speechBubbleAnimationDelay);
 
-        nPCContinueButton.SetActive(false);
         if(playerIndex < playerDialogueSentences.Length - 1)
         {
             if(dialogueStarted)
@@ -100,7 +101,7 @@ public class NewDialogueManager : MonoBehaviour
         nPCDialogueText.text = string.Empty;
         nPCSpeechBubbleAnimator.SetTrigger("Open");
         yield return new WaitForSeconds(speechBubbleAnimationDelay);
-        playerContinueButton.SetActive(false);
+
         if(nPCIndex < nPCDialogueSentences.Length - 1)
         {
             if(dialogueStarted)
