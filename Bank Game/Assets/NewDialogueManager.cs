@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class NewDialogueManager : MonoBehaviour
 {
@@ -79,6 +80,10 @@ public class NewDialogueManager : MonoBehaviour
         playerDialogueText.text = string.Empty;
         playerSpeechBubbleAnimator.SetTrigger("Open");
         yield return new WaitForSeconds(speechBubbleAnimationDelay);
+
+        if(playerIndex==6){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
 
         if(playerIndex < playerDialogueSentences.Length - 1)
         {

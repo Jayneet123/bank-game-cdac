@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Bank Interior/Bank Interior.unity
     guid: 5ca7f9ccfbe10024ba03e0f6250f10ae
+  - enabled: 1
+    path: Assets/Application Form/Application Form.unity
+    guid: da61b364552c72b4a89e84b78da91fa2
   m_configObjects: {}
