@@ -7,6 +7,7 @@ TagManager:
   - Bank
   - Wall
   - Desk
+  - Input
   layers:
   - Default
   - TransparentFX
