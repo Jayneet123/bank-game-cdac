@@ -743,8 +743,17 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219797958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 7.5, y: 8.5, z: -5.1}
+=======
+<<<<<<< Updated upstream
+  m_LocalPosition: {x: 4.4691, y: 8.9, z: -5.1}
+>>>>>>> e26b93469696480b0a04a7f359aa4b3a9f2cfd97
   m_LocalScale: {x: -2.3294826, y: 2.3523, z: 2.3523}
+=======
+  m_LocalPosition: {x: 1.4554, y: 5.4394, z: -23.732277}
+  m_LocalScale: {x: 2.526704, y: 2.3103883, z: 2.5602434}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1450012722}
@@ -3779,7 +3788,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   mouseDragPhysicsSpeed: 10
-  mouseDragSpeed: 0.1
+  mouseDragSpeed: 0
 --- !u!4 &797521640
 Transform:
   m_ObjectHideFlags: 0
@@ -9098,7 +9107,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 1.2, y: 0}
+=======
+  m_AnchoredPosition: {x: 47, y: -15}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2061404053
@@ -9184,7 +9197,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -43.342094, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
