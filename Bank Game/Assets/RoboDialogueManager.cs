@@ -34,6 +34,7 @@ public class RoboDialogueManager : MonoBehaviour
             roboTutorialSpeechBubble.SetActive(false);
         }
         if(roboIndex < roboDialogueSentences.Length){
+            roboContinueButton.SetActive(false);
             foreach(char letter in roboDialogueSentences[roboIndex].ToCharArray())
             {
                 roboDialogueText.text += letter;
