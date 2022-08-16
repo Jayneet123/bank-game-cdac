@@ -24,7 +24,6 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-<<<<<<< Updated upstream
 <<<<<<< HEAD
   controlID: 1826
 =======
@@ -42,9 +41,6 @@ MonoBehaviour:
   controlID: 3450
 >>>>>>> Stashed changes
 >>>>>>> e26b93469696480b0a04a7f359aa4b3a9f2cfd97
-=======
-  controlID: 122
->>>>>>> Stashed changes
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,7 +263,6 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-<<<<<<< Updated upstream
   controlID: 1827
 =======
 <<<<<<< Updated upstream
@@ -295,9 +290,6 @@ MonoBehaviour:
   controlID: 3451
 >>>>>>> Stashed changes
 >>>>>>> e26b93469696480b0a04a7f359aa4b3a9f2cfd97
-=======
-  controlID: 123
->>>>>>> Stashed changes
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -324,7 +316,6 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-<<<<<<< Updated upstream
   controlID: 1828
 =======
 <<<<<<< Updated upstream
@@ -352,9 +343,6 @@ MonoBehaviour:
   controlID: 3452
 >>>>>>> Stashed changes
 >>>>>>> e26b93469696480b0a04a7f359aa4b3a9f2cfd97
-=======
-  controlID: 124
->>>>>>> Stashed changes
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -423,7 +411,6 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-<<<<<<< Updated upstream
 <<<<<<< HEAD
       scrollPos: {x: 0, y: 55}
       m_SelectedIDs: 64700000
@@ -447,12 +434,6 @@ MonoBehaviour:
       m_ExpandedIDs: b8ccffff6ed0ffff8adeffffc4ebffff12fbffff78600000fa600000346100002062000084620000b07c0000667d0000807d0000668a0000068c0000
 >>>>>>> Stashed changes
 >>>>>>> e26b93469696480b0a04a7f359aa4b3a9f2cfd97
-=======
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 14670000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 9ef0ffff5cf3ffff34fbffff
->>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -971,7 +952,6 @@ MonoBehaviour:
     y: 371
     width: 1075
     height: 256
-<<<<<<< Updated upstream
 =======
     y: 418.4
     width: 1157.6
@@ -986,17 +966,6 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &11
-=======
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
-  - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &14
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1019,7 +988,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     x: 0
     y: 444
-    width: 1037
+    width: 1074
     height: 235
 =======
     x: 7.2000003
@@ -1070,7 +1039,6 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-<<<<<<< Updated upstream
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 20630000
     m_LastClickedID: 25376
@@ -1109,12 +1077,6 @@ MonoBehaviour:
     m_ExpandedIDs: 000000006263000000ca9a3b
 >>>>>>> Stashed changes
 >>>>>>> e26b93469696480b0a04a7f359aa4b3a9f2cfd97
-=======
-    scrollPos: {x: 0, y: 44.000854}
-    m_SelectedIDs: e2660000
-    m_LastClickedID: 26338
-    m_ExpandedIDs: 00000000ce66000000ca9a3bffffff7f
->>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1146,7 +1108,6 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< Updated upstream
 <<<<<<< HEAD
     m_ExpandedIDs: 000000001e630000206300002263000000ca9a3b
 =======
@@ -1160,9 +1121,6 @@ MonoBehaviour:
     m_ExpandedIDs: 000000006263000000ca9a3b
 >>>>>>> Stashed changes
 >>>>>>> e26b93469696480b0a04a7f359aa4b3a9f2cfd97
-=======
-    m_ExpandedIDs: 00000000ce660000
->>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1187,7 +1145,6 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-<<<<<<< Updated upstream
 <<<<<<< HEAD
     m_SelectedInstanceIDs: 64700000
     m_LastClickedInstanceID: 28772
@@ -1201,10 +1158,6 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 54650000
     m_LastClickedInstanceID: 25940
 >>>>>>> f0020838dc1031a2907fa9abd55e89b347554a5f
-=======
-    m_SelectedInstanceIDs: 14670000
-    m_LastClickedInstanceID: 26388
->>>>>>> Stashed changes
     m_HadKeyboardFocusLastEvent: 1
 =======
     m_SelectedInstanceIDs: 
