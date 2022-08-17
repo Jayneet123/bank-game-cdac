@@ -9,6 +9,13 @@ TagManager:
   - Desk
   - Input
   - Draggable
+  - Name
+  - ID
+  - MotherName
+  - Mobile
+  - Email
+  - Address
+  - DOB
   layers:
   - Default
   - TransparentFX
