@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Desk
   - Input
+  - Draggable
   layers:
   - Default
   - TransparentFX
