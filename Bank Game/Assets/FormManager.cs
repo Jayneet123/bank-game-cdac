@@ -9,7 +9,7 @@ public class FormManager : MonoBehaviour
 {
     public GameObject aadharNumber;
     public GameObject aadharNumberOnCard;
-    private int counter =0;
+    private int counter = 0;
     
     public void onSubmit(){
         if (aadharNumber.tag == aadharNumberOnCard.tag){

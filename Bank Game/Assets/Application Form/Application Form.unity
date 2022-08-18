@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -295,7 +295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_AnchoredPosition: {x: 0, y: -0.4999962}
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &43546412
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: {fileID: 0}
   onNameField: {fileID: 0}
-  gameObject: {fileID: 189146493}
+  gameObject: {fileID: 0}
 --- !u!1 &227381721
 GameObject:
   m_ObjectHideFlags: 0
@@ -3972,7 +3972,7 @@ GameObject:
   - component: {fileID: 647279392}
   m_Layer: 0
   m_Name: Screenshot (408)
-  m_TagString: Untagged
+  m_TagString: ID
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4212,7 +4212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 112, y: 13}
+  m_AnchoredPosition: {x: 169, y: 13}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &714176910
@@ -5240,7 +5240,7 @@ GameObject:
   - component: {fileID: 939804611}
   m_Layer: 0
   m_Name: Aadhar Card
-  m_TagString: Untagged
+  m_TagString: ID
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6256,8 +6256,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140, y: 11}
-  m_SizeDelta: {x: 245.7, y: 30}
+  m_AnchoredPosition: {x: 184.62688, y: 11}
+  m_SizeDelta: {x: 373.056, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1164226016
 MonoBehaviour:
@@ -7177,7 +7177,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293960326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.314}
   m_LocalScale: {x: 0.6125, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7187,8 +7187,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 96, y: 13}
-  m_SizeDelta: {x: 412.91, y: 30}
+  m_AnchoredPosition: {x: 157.666, y: -3.909}
+  m_SizeDelta: {x: 614.269, y: 63.831}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1293960328
 MonoBehaviour:
@@ -9512,7 +9512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'ID CARD NO. :'
+  m_text: ' AADHAR CARD NO. :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11767,7 +11767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.39, y: -2.44}
+  m_AnchoredPosition: {x: -3.39, y: -2.46}
   m_SizeDelta: {x: 291.6725, y: 50}
   m_Pivot: {x: 0.55238354, y: 0.49999994}
 --- !u!114 &2089645676
