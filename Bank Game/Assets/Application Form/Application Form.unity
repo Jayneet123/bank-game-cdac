@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -699,9 +699,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6fb3520db0f1d4ba6c9d50457a7fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 0}
-  onNameField: {fileID: 0}
-  gameObject: {fileID: 0}
+  name: {fileID: 388317865}
+  gameObject: {fileID: 189146493}
 --- !u!1 &227381721
 GameObject:
   m_ObjectHideFlags: 0
@@ -3322,9 +3321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6fb3520db0f1d4ba6c9d50457a7fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 0}
-  onNameField: {fileID: 0}
-  gameObject: {fileID: 0}
+  name: {fileID: 1401184504}
+  gameObject: {fileID: 575139524}
 --- !u!1 &586665542
 GameObject:
   m_ObjectHideFlags: 0
@@ -4363,9 +4361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6fb3520db0f1d4ba6c9d50457a7fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 0}
-  onNameField: {fileID: 0}
-  gameObject: {fileID: 0}
+  name: {fileID: 412616638}
+  gameObject: {fileID: 714176910}
 --- !u!1 &724059594
 GameObject:
   m_ObjectHideFlags: 0
@@ -6407,9 +6404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6fb3520db0f1d4ba6c9d50457a7fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 0}
-  onNameField: {fileID: 0}
-  gameObject: {fileID: 0}
+  name: {fileID: 510476081}
+  gameObject: {fileID: 1164226016}
 --- !u!1 &1177310025
 GameObject:
   m_ObjectHideFlags: 0
@@ -8069,7 +8065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 6.258, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 738.75, y: 284.54}
+  m_AnchoredPosition: {x: 735, y: 284.54}
   m_SizeDelta: {x: 143.71, y: 18.52}
   m_Pivot: {x: 0.55238354, y: 0.49999994}
 --- !u!225 &1416136525
@@ -9995,7 +9991,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: {fileID: 0}
-  onNameField: {fileID: 0}
   gameObject: {fileID: 0}
 --- !u!1 &1691049720
 GameObject:
@@ -10460,8 +10455,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294572543
-  m_fontColor: {r: 1, g: 0.97547174, b: 0.97547174, a: 1}
+    rgba: 4279111182
+  m_fontColor: {r: 0.05660379, g: 0.055215396, b: 0.055215396, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

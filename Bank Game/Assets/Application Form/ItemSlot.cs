@@ -7,18 +7,18 @@ using TMPro;
 
 public class ItemSlot : MonoBehaviour , IDropHandler
 {
-    public Text name;
-    public Text onNameField;
+    public TextMeshProUGUI name;
+    // public TextMeshProUGUI onNameField;
     public TMP_InputField gameObject;
     public void OnDrop(PointerEventData eventData){
         Debug.Log("OnDrop");
         // if (eventData.pointerDrag != null){
         //     eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
         // }
-        onNameField.text = name.text;
+        gameObject.text = name.text;
         name.text = " ";
-        gameObject.interactable=false;
-        gameObject.text="";
+        // gameObject.interactable=false;
+        // gameObject.text="";
         
     }
 }
