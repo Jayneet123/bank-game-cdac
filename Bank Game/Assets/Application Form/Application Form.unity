@@ -486,6 +486,7 @@ MonoBehaviour:
   dobInput: {fileID: 575139524}
   motherName: {fileID: 510476081}
   motherNameInput: {fileID: 1164226016}
+  phone: {fileID: 0}
   fatherNamePAN: {fileID: 1416136527}
   fatherNameBirth: {fileID: 1619858700}
   panNumber: {fileID: 2005015407}
@@ -494,6 +495,7 @@ MonoBehaviour:
   day: {fileID: 1419751108}
   month: {fileID: 974255712}
   year: {fileID: 400504805}
+  j: 0
 --- !u!224 &140692929
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5416,7 +5418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +91
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8105,7 +8107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 6.258, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 735, y: 284.54}
+  m_AnchoredPosition: {x: 730, y: 247}
   m_SizeDelta: {x: 143.71, y: 18.52}
   m_Pivot: {x: 0.55238354, y: 0.49999994}
 --- !u!225 &1416136525
@@ -9754,7 +9756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9622642, g: 0.92141336, b: 0.92141336, a: 1}
+  m_Color: {r: 0.9811321, g: 0.97557855, b: 0.97557855, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11089,7 +11091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 6.258, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 704.85, y: 319.25}
+  m_AnchoredPosition: {x: 704.85, y: 296}
   m_SizeDelta: {x: 130.84, y: 19.23}
   m_Pivot: {x: 0.55238354, y: 0.49999994}
 --- !u!225 &1997907992

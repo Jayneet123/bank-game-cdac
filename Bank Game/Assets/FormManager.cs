@@ -18,7 +18,7 @@ public class FormManager : MonoBehaviour
     public TMP_InputField dobInput;
     public TextMeshProUGUI motherName;
     public TMP_InputField motherNameInput;
-    // public TextMeshProUGUI gender;
+    public TMP_InputField phone;
     public TextMeshProUGUI fatherNamePAN;
     public TextMeshProUGUI fatherNameBirth;
     public TextMeshProUGUI panNumber;
@@ -58,7 +58,7 @@ public class FormManager : MonoBehaviour
     }
     
     public void onSubmit(){
-        if ((nameInput.text==names[j])&&(aadharInput.text==aadharNumbers[j])&&(dobInput.text==dobs[j])&&(motherNameInput.text==motherNames[j])){
+        if ((nameInput.text==names[j])&&(aadharInput.text==aadharNumbers[j])&&(dobInput.text==dobs[j])&&(motherNameInput.text==motherNames[j])&&(phone.text.Length == 10)){
             counter++;
             Debug.Log(counter);
         }
