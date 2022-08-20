@@ -55,4 +55,8 @@ public class UserAccountManager : MonoBehaviour
             }
         );
     }
+
+    public void onBackButtonClick(){
+        SceneManager.LoadScene("Login");
+    }
 }
