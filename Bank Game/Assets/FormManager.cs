@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 
 public class FormManager : MonoBehaviour
@@ -28,7 +29,7 @@ public class FormManager : MonoBehaviour
     public TextMeshProUGUI month;
     public TextMeshProUGUI year;
 
-    private int counter = 0;
+    public int counter = 0;
     private string[] names = {"Rahul Ram Das","Ganesh Shyam Das","Mukund Gopal Das"};
     private string[] aadharNumbers = {"123456789012","111122223333","777788889999"};
     private string[] dobs = {"17/12/2001","16/05/1986","08/09/1977"};
@@ -39,6 +40,11 @@ public class FormManager : MonoBehaviour
     private string[] months = {"December","May","September"};
     private string[] years = {"2001","1986","1977"};
     public int j ;
+
+    public GameObject try1;
+    public GameObject try2;
+    public GameObject try3;
+    static int noOfTries=1;
 
     private void Awake() {
         int i = Random.Range(0,3);
@@ -65,6 +71,15 @@ public class FormManager : MonoBehaviour
         else{
             Debug.Log("Error");
         }
-        
+        if (counter == 1){
+            if(noOfTries==1) try1.SetActive(true);
+            if(noOfTries==2) try2.SetActive(true);
+            if(noOfTries==3) try3.SetActive(true);
+        }
+        else {
+            SceneManager.LoadScene("Application Form");
+            noOfTries++;
+        }
+
     }
 }
