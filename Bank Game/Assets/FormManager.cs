@@ -30,15 +30,15 @@ public class FormManager : MonoBehaviour
     public TextMeshProUGUI year;
 
     public int counter = 0;
-    private string[] names = {"Rahul Ram Das","Ganesh Shyam Das","Mukund Gopal Das"};
-    private string[] aadharNumbers = {"123456789012","111122223333","777788889999"};
-    private string[] dobs = {"17/12/2001","16/05/1986","08/09/1977"};
-    private string[] motherNames = {"Sita Ram Das","Radha Shyam Das","Paravti Gopal Das"};
-    private string[] fatherNames = {"Ram Das","Shyam Das","Gopal Das"};
-    private string[] panNumbers = {"AESPD5678H","WORPD3378N","BORPD3569H"}; 
-    private string[] days = {"17th","16th","8th"};
-    private string[] months = {"December","May","September"};
-    private string[] years = {"2001","1986","1977"};
+    private string[] names = {"Rahul Ram Das","Ganesh Shyam Das","Mukund Gopal Das","Raj Shravan Das","Rohan Dev Das"};
+    private string[] aadharNumbers = {"123456789012","111122223333","777788889999","555566668888","333322220000"};
+    private string[] dobs = {"17/12/2001","16/05/1986","08/09/1977","31/10/2002","26/02/2001"};
+    private string[] motherNames = {"Sita Ram Das","Radha Shyam Das","Paravti Gopal Das","Gopi Shravan Das","Varsha Dev Das"};
+    private string[] fatherNames = {"Ram Das","Shyam Das","Gopal Das","Shravan Das","Dev Das"};
+    private string[] panNumbers = {"AESPD5678H","WORPD3378N","BORPD3569H","ABCEF456O7"}; 
+    private string[] days = {"17th","16th","8th","31st","26th"};
+    private string[] months = {"December","May","September","October","February"};
+    private string[] years = {"2001","1986","1977","2002","2001"};
     public int j ;
 
     public GameObject try1;
