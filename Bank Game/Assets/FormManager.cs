@@ -29,6 +29,8 @@ public class FormManager : MonoBehaviour
     public TextMeshProUGUI month;
     public TextMeshProUGUI year;
 
+    public GameObject roboTutorialSpeech;
+
     public int counter = 0;
     private string[] names = {"Rahul Ram Das","Ganesh Shyam Das","Mukund Gopal Das","Raj Shravan Das","Rohan Dev Das"};
     private string[] aadharNumbers = {"123456789012","111122223333","777788889999","555566668888","333322220000"};
@@ -44,10 +46,13 @@ public class FormManager : MonoBehaviour
     public GameObject try1;
     public GameObject try2;
     public GameObject try3;
+    public GameObject fireworks;
+    public GameObject fireworks2;
+    
     static int noOfTries=1;
 
     private void Awake() {
-        int i = Random.Range(0,3);
+        int i = Random.Range(0,5);
         j=i;
         nameAadhar.text = names[i];
         namePAN.text = names[i];
@@ -72,6 +77,9 @@ public class FormManager : MonoBehaviour
             Debug.Log("Error");
         }
         if (counter == 1){
+            roboTutorialSpeech.SetActive(false);
+            fireworks.SetActive(true);
+            fireworks2.SetActive(true);
             if(noOfTries==1) try1.SetActive(true);
             if(noOfTries==2) try2.SetActive(true);
             if(noOfTries==3) try3.SetActive(true);

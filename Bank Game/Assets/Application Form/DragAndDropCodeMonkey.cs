@@ -16,18 +16,18 @@ public class DragAndDropCodeMonkey : MonoBehaviour , IPointerDownHandler , IBegi
     }
 
     public void OnPointerDown(PointerEventData eventData){
-        Debug.Log("OnPointerDown");
+        // Debug.Log("OnPointerDown");
         canvasGroup.enabled = true;
     }
 
     public void OnBeginDrag(PointerEventData eventData){
-        Debug.Log("OnBeginDrag");
+        // Debug.Log("OnBeginDrag");
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0.6f;
     }
 
     public void OnDrag(PointerEventData eventData){
-        Debug.Log("OnDrag");
+        // Debug.Log("OnDrag");
         Vector2 position;
         RectTransformUtility.ScreenPointToLocalPointInRectangle((RectTransform)canvas.transform,
         eventData.position,canvas.worldCamera,out position);
@@ -35,7 +35,7 @@ public class DragAndDropCodeMonkey : MonoBehaviour , IPointerDownHandler , IBegi
     }
 
     public void OnEndDrag(PointerEventData eventData){
-        Debug.Log("OnEndDrag");
+        // Debug.Log("OnEndDrag");
         canvasGroup.alpha = 1f;
         // canvasGroup.blocksRaycasts = false;
     }
