@@ -90,4 +90,7 @@ public class FormManager : MonoBehaviour
         }
 
     }
+    public void onBack(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
 }

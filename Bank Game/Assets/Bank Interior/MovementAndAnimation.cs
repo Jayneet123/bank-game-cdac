@@ -19,6 +19,8 @@ public class MovementAndAnimation : MonoBehaviour
     public GameObject mainCam;
     public GameObject cam2;
     public GameObject newDialogueManager;
+    public Canvas dialogueBackButton;
+    public Canvas normalBackButton;
 
     //runs before the start function
     void Awake(){
@@ -86,6 +88,8 @@ public class MovementAndAnimation : MonoBehaviour
             cam2.SetActive(true);
             OnDisable();
             newDialogueManager.SetActive(true);
+            dialogueBackButton.enabled = true;
+            normalBackButton.enabled = false;
         }
     }
     

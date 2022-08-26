@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class NewDialogueManager : MonoBehaviour
 {
-    [SerializeField] private float typingSpeed = 0.05f;
+    [SerializeField] private float typingSpeed = 0.02f;
 
     [SerializeField] private bool PlayerSpeakingFirst;
     [Header("Dialogue TMP text")]
@@ -23,7 +23,6 @@ public class NewDialogueManager : MonoBehaviour
     [SerializeField] private GameObject playerContinueButton;
     [SerializeField] private GameObject nPCContinueButton;
     private bool dialogueStarted;
-    // private bool playerSpeak = true;
 
     private int playerIndex;
     private int nPCIndex;
@@ -125,5 +124,9 @@ public class NewDialogueManager : MonoBehaviour
 
     public void TriggerContinueNPCDialogue(){
     StartCoroutine(ContinueNPCDialogue());
+    }
+
+    public void onBack(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
