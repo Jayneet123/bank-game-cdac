@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -514,8 +514,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279440915
-  m_fontColor: {r: 0.074092224, g: 0.084905684, b: 0.07439886, a: 1}
+    rgba: 4279049997
+  m_fontColor: {r: 0.050329298, g: 0.122641504, b: 0.050329298, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16017,7 +16017,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.23137252, g: 0.9607843, b: 0.947351, a: 1}
+    m_NormalColor: {r: 0.23137252, g: 0.67828727, b: 0.9607843, a: 1}
     m_HighlightedColor: {r: 0.102050245, g: 0.3018868, b: 0.049839795, a: 1}
     m_PressedColor: {r: 0.26053056, g: 0.9150943, b: 0.082013145, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -32136,6 +32136,7 @@ GameObject:
   - component: {fileID: 1691049721}
   - component: {fileID: 1691049723}
   - component: {fileID: 1691049722}
+  - component: {fileID: 1691049724}
   m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
@@ -32215,6 +32216,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691049720}
   m_CullTransparentMesh: 1
+--- !u!114 &1691049724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691049720}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57fe791a38f0a024ca88c1be46ba9cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1801677162
 GameObject:
   m_ObjectHideFlags: 0
@@ -47836,7 +47849,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.23137252, g: 0.9607843, b: 0.947351, a: 1}
+    m_NormalColor: {r: 0.21698113, g: 0.70384324, b: 0.8679245, a: 1}
     m_HighlightedColor: {r: 0.102050245, g: 0.3018868, b: 0.049839795, a: 1}
     m_PressedColor: {r: 0.26053056, g: 0.9150943, b: 0.082013145, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
