@@ -66,6 +66,11 @@ public class FormManager : MonoBehaviour
     public GameObject robo;
     public GameObject playerSS;
 
+    private string[] submitDialogueSentences = {"Your form has been submitted succesfully"};
+    private float typingSpeed = 0.05f;
+    private int submitIndex = 0;
+    public GameObject continueButton;
+
     public Animator speechBubbleAnimator;
     public Animator submitAnimator;
     public Animator aadharAnimator;
@@ -97,15 +102,21 @@ public class FormManager : MonoBehaviour
     }
     
     public void onSubmit(){
+        // To start the dialogues after submitting the form
+        StartCoroutine(SubmitDialogue());
         roboTutorialSpeech.SetActive(false);
         robo.SetActive(false);
+        // All the docs disappear from the scene
         submitAnimator.SetTrigger("Submit");
         aadharAnimator.SetTrigger("Submit");
         panAnimator.SetTrigger("Submit");
         birthAnimator.SetTrigger("Submit");
+        // Open the speech bubble for submit
         speechBubbleAnimator.SetTrigger("Open");
         speechBubble.SetActive(true);
         playerSS.SetActive(true);
+
+        // Checking for errors and if any append to the list
         if (nameInput.text!=names[j]) errorPlace.Add("Full Name");
         if (aadharInput.text!=aadharNumbers[j]) errorPlace.Add("Aadhar Card Number");
         if (dobInput.text!=dobs[j]) errorPlace.Add("Date of Birth");
@@ -115,44 +126,78 @@ public class FormManager : MonoBehaviour
         if (emailInput.text!=emails[j]) errorPlace.Add("Email Address");
         if (phone.text.Length != 10) errorPlace.Add("Phone Number");
         
-
+        // Checking if all the fields are correct, if yes counter incremented
         if(nameInput.text==names[j]&&(aadharInput.text==aadharNumbers[j])&&(dobInput.text==dobs[j])&&(motherNameInput.text==motherNames[j])&&(phone.text.Length == 10)&&(salaryInput.text==salaries[j])&&(addressInput.text==addresses[j])&&(emailInput.text==emails[j])){
             counter++;
         }
-        else{
-            errorText.text = "There is an error in ";
-            foreach (var error in errorPlace){
-                errorText.text += error+",";
-            }
-        }
-        if (counter == 1){
-            roboTutorialSpeech.SetActive(false);
-            fireworks.SetActive(true);
-            if(noOfTries==1) try1.SetActive(true);
-            if(noOfTries==2) try2.SetActive(true);
-            if(noOfTries==3) try3.SetActive(true);
-        }
-        else {
-            // SceneManager.LoadScene("Application Form");
-            noOfTries++;
-        }
-
     }
     public void onBack(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
-
+    // Function for additional info
     public void onAddInfo(){
         aadharCard.SetActive(false);
         birthCertificate.SetActive(false);
         panCard.SetActive(false);
         addInfo.SetActive(true);
     }
-
+    // Function to return from the additional info page
     public void onReturn(){
         aadharCard.SetActive(true);
         birthCertificate.SetActive(true);
         panCard.SetActive(true);
         addInfo.SetActive(false);
+    }
+    // Starting the coroutine of SubmitDialogue
+    private IEnumerator SubmitDialogue(){
+        speechBubbleAnimator.SetTrigger("Open");
+        speechBubble.SetActive(true);
+        yield return new WaitForSeconds(0.0f);
+        StartCoroutine(TypeSubmitDialogue());
+    }
+    public IEnumerator TypeSubmitDialogue(){
+        errorText.text = string.Empty;
+        // The player has index 2 only if he has not answered eveything correctly
+        if(submitIndex==2){
+            speechBubbleAnimator.SetTrigger("Close");
+            speechBubble.SetActive(false);
+            SceneManager.LoadScene("Application Form");
+            noOfTries++;
+        }
+        // On the array index 1 we check whether the counter is 1, if yes scored accordingly
+        if (submitIndex==1 && counter == 1){
+            addInfo.SetActive(false);
+            speechBubble.SetActive(false);
+            playerSS.SetActive(false);
+            roboTutorialSpeech.SetActive(false);
+            fireworks.SetActive(true);
+            if(noOfTries==1) try1.SetActive(true);
+            if(noOfTries==2) try2.SetActive(true);
+            if(noOfTries==3) try3.SetActive(true);
+        }
+        // On array index 1 we check whether the counter is 0 if yes then errors are shown
+        if (submitIndex==1 && counter == 0){
+            string abc = "There is an error in ";
+            foreach (var error in errorPlace){
+                abc += error+",";
+            }
+            submitDialogueSentences = new List<string>(submitDialogueSentences){abc}.ToArray();
+        }
+
+        if(submitIndex < submitDialogueSentences.Length){
+            continueButton.SetActive(false);
+            foreach(char letter in submitDialogueSentences[submitIndex].ToCharArray())
+            {
+                errorText.text += letter;
+                yield return new WaitForSeconds(typingSpeed);
+            }
+            Debug.Log("W");
+        }
+        submitIndex++;
+        continueButton.SetActive(true);
+    }
+
+    public void TriggerTypeSubmitDialogue(){
+        StartCoroutine(TypeSubmitDialogue());
     }
 }
