@@ -34,6 +34,7 @@ public class FormManager : MonoBehaviour
     public TextMeshProUGUI day;
     public TextMeshProUGUI month;
     public TextMeshProUGUI year;
+    public TextMeshProUGUI errorText;
 
     public GameObject roboTutorialSpeech;
 
@@ -43,7 +44,7 @@ public class FormManager : MonoBehaviour
     private string[] dobs = {"17/12/2001","16/05/1986","08/09/1977","31/10/2002","26/02/2001"};
     private string[] motherNames = {"Sita Ram Das","Radha Shyam Das","Paravti Gopal Das","Gopi Shravan Das","Varsha Dev Das"};
     private string[] fatherNames = {"Ram Das","Shyam Das","Gopal Das","Shravan Das","Dev Das"};
-    private string[] panNumbers = {"AESPD5678H","WORPD3378N","BORPD3569H","ABCEF456O7"}; 
+    private string[] panNumbers = {"AESPD5678H","WORPD3378N","BORPD3569H","ABCEF456OH","PENPD9090H"}; 
     private string[] days = {"17th","16th","8th","31st","26th"};
     private string[] months = {"December","May","September","October","February"};
     private string[] years = {"2001","1986","1977","2002","2001"};
@@ -62,6 +63,13 @@ public class FormManager : MonoBehaviour
     public GameObject panCard;
     public GameObject birthCertificate;
     public GameObject addInfo;
+
+    public Animator submitAnimator;
+    public Animator aadharAnimator;
+    public Animator panAnimator;
+    public Animator birthAnimator;
+
+    List <string> errorPlace = new List<string>();
     
     static int noOfTries=1;
 
@@ -86,12 +94,27 @@ public class FormManager : MonoBehaviour
     }
     
     public void onSubmit(){
-        if ((nameInput.text==names[j])&&(aadharInput.text==aadharNumbers[j])&&(dobInput.text==dobs[j])&&(motherNameInput.text==motherNames[j])&&(phone.text.Length == 10)&&(salaryInput.text==salaries[j])&&(addressInput.text==addresses[j])&&(emailInput.text==emails[j])){
+        submitAnimator.SetTrigger("Submit");
+        aadharAnimator.SetTrigger("Submit");
+        panAnimator.SetTrigger("Submit");
+        birthAnimator.SetTrigger("Submit");
+        if (nameInput.text!=names[j]) errorPlace.Add("Full Name");
+        if (aadharInput.text!=aadharNumbers[j]) errorPlace.Add("Aadhar Card Number");
+        if (dobInput.text!=dobs[j]) errorPlace.Add("Date of Birth");
+        if (motherNameInput.text!=motherNames[j]) errorPlace.Add("Mothers Name");
+        if (phone.text.Length != 10) errorPlace.Add("Phone Number");
+        if (salaryInput.text!=salaries[j]) errorPlace.Add("Salary");
+        if (addressInput.text!=addresses[j]) errorPlace.Add("Address");
+        if (emailInput.text!=emails[j]) errorPlace.Add("Email Address");
+
+        if(nameInput.text==names[j]&&(aadharInput.text==aadharNumbers[j])&&(dobInput.text==dobs[j])&&(motherNameInput.text==motherNames[j])&&(phone.text.Length == 10)&&(salaryInput.text==salaries[j])&&(addressInput.text==addresses[j])&&(emailInput.text==emails[j])){
             counter++;
-            Debug.Log(counter);
         }
         else{
-            Debug.Log("Error");
+            errorText.text = "There is an error in";
+            foreach (var error in errorPlace){
+                errorText.text += error+",";
+            }
         }
         if (counter == 1){
             roboTutorialSpeech.SetActive(false);
@@ -102,7 +125,7 @@ public class FormManager : MonoBehaviour
             if(noOfTries==3) try3.SetActive(true);
         }
         else {
-            SceneManager.LoadScene("Application Form");
+            // SceneManager.LoadScene("Application Form");
             noOfTries++;
         }
 
