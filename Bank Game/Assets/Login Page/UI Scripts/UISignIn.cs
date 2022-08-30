@@ -20,6 +20,9 @@ public class UISignIn : MonoBehaviour
     }
 
     public void SignIn(){
+        if (UserAccountManager.Instance.counter == 2){
+            UserAccountManager.Instance.errorType.text = "Here's a hint.\nTry the credentials.\nUsername:Bank123\nPassword:Bank123";
+        }
         UserAccountManager.Instance.SignIn(username,password);
     }
 }

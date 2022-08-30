@@ -5,18 +5,21 @@ using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class UserAccountManager : MonoBehaviour
 {
+    public int counter = 0;
     public Canvas options;
     public Canvas signIn;
     public Canvas createAccount;
     public Button signInButton;
     public static UserAccountManager Instance;
+    public TextMeshProUGUI errorType;
+    public GameObject panel;
 
     void Awake(){
         Instance = this;
-        
     }
 
     public void CreateAccount(string emailAddress,string username,string password){
@@ -27,12 +30,15 @@ public class UserAccountManager : MonoBehaviour
                 Username = username
             },
             result => {
+                panel.SetActive(true);
+                errorType.text = "Account has been created successfully. Please signin";
                 Debug.Log($"Successful Account Creation for {username} and {emailAddress}");
                 createAccount.enabled = false;
                 signIn.enabled = true;
             },
             error => {
-                Debug.Log($"Unsuccessful Account Creation for {username} and {emailAddress}\n {error.GenerateErrorReport()}");
+                panel.SetActive(true);
+                errorType.text = $"Unsuccessful Account Creation for {username} \nPlease check that email should be from A to Z , 0 to 9 without dot and password between 0 to 9 characters";
             }
         );
     }
@@ -47,12 +53,17 @@ public class UserAccountManager : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             },
         error => {
-                Debug.Log($"Unsuccessful Account Login for {username}\n {error.GenerateErrorReport()}");
+                panel.SetActive(true);
+                errorType.text = $"Unsuccessful Account Login for {username}\n\nPlease check the credentials and try again";
             }
         );
     }
 
     public void onBackButtonClick(){
         SceneManager.LoadScene("Login");
+    }
+
+    public void onSignInButtonClick(){
+        counter++;
     }
 }
