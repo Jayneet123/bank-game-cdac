@@ -9,7 +9,7 @@ using TMPro;
 
 public class UserAccountManager : MonoBehaviour
 {
-    public int counter = 0;
+    public static int counter = 0;
     public Canvas options;
     public Canvas signIn;
     public Canvas createAccount;
@@ -65,5 +65,6 @@ public class UserAccountManager : MonoBehaviour
 
     public void onSignInButtonClick(){
         counter++;
+        Debug.Log(counter);
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEditor;
 
 public class MovementAndAnimation : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class MovementAndAnimation : MonoBehaviour
     CharacterController characterController;
     Animator animator;
     
+    //Robot Controls
+    public GameObject robo;
+    public GameObject roboDialogue;
 
     Vector2 currentMovementInput;
     Vector3 currentMovement;
@@ -47,6 +51,8 @@ public class MovementAndAnimation : MonoBehaviour
 
         Quaternion currentRotation = transform.rotation;
         if (isMovementPressed){
+            robo.SetActive(false);
+            roboDialogue.SetActive(false);
             Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
             transform.rotation = Quaternion.Slerp(currentRotation,targetRotation,rotationFactorPerFrame);
         }
@@ -67,7 +73,6 @@ public class MovementAndAnimation : MonoBehaviour
 
     void Update()
     {
-        
         handleRotation();
         handleAnimation();
         characterController.Move(currentMovement* Time.deltaTime);
@@ -82,8 +87,6 @@ public class MovementAndAnimation : MonoBehaviour
     }   
     void OnControllerColliderHit(ControllerColliderHit hit){
         if (hit.gameObject.CompareTag("Desk")){
-            // canvas.SetActive(true);
-            // To disable camera 
             mainCam.SetActive(false);
             cam2.SetActive(true);
             OnDisable();
@@ -91,6 +94,8 @@ public class MovementAndAnimation : MonoBehaviour
             dialogueBackButton.enabled = true;
             normalBackButton.enabled = false;
         }
+        if (hit.gameObject.CompareTag("Finish")){
+            EditorUtility.DisplayDialog("Error! Going out of the play area","Please return to the play zone by pressing W","Ok","Cancel");
+        }
     }
-    
 }
