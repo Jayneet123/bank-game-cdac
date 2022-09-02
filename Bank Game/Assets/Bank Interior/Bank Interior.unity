@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -227,7 +227,7 @@ Transform:
   m_Children:
   - {fileID: 1437988116}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &43356073
 GameObject:
@@ -322,7 +322,8 @@ Transform:
   m_LocalPosition: {x: 1.63, y: 3.6, z: 47.81}
   m_LocalScale: {x: 0.2, y: 7, z: 30}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 853719691}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1264,7 +1265,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792126669
 GameObject:
@@ -1571,13 +1572,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853719690}
   m_LocalRotation: {x: -0, y: 0.66733515, z: -0, w: 0.74475765}
-  m_LocalPosition: {x: 12, y: 2.13, z: 45.03}
-  m_LocalScale: {x: 0.4854001, y: 0.7224, z: 1}
+  m_LocalPosition: {x: 51.85, y: -0.20999996, z: -0.09266676}
+  m_LocalScale: {x: 0.016374417, y: 0.103199996, z: 1.7979623}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1326263330}
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 43356077}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 83.723, z: 0}
 --- !u!1 &873180685
 GameObject:
@@ -2302,7 +2303,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &995587960
 Animator:
@@ -4033,7 +4034,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1588142270
 MonoBehaviour:
@@ -4047,7 +4048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 022e65b0e18a29d4181bb025602de3e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.05
+  typingSpeed: 0.01
   roboDialogueText: {fileID: 1696902829}
   roboSpeechBubbleAnimator: {fileID: 18233083}
   roboAnimator: {fileID: 995587960}
