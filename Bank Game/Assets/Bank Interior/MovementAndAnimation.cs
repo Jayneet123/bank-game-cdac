@@ -95,7 +95,8 @@ public class MovementAndAnimation : MonoBehaviour
             normalBackButton.enabled = false;
         }
         if (hit.gameObject.CompareTag("Finish")){
-            EditorUtility.DisplayDialog("Error! Going out of the play area","Please return to the play zone by pressing W","Ok","Cancel");
+            Debug.Log("Out of the area");
+            // EditorUtility.DisplayDialog("Error! Going out of the play area","Please return to the play zone by pressing W","Ok","Cancel");
         }
     }
 }
