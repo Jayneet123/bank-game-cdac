@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class MoveRandomly : MonoBehaviour
 {
-
     public float timer;
 
     public int newtarget;
@@ -35,8 +34,8 @@ public class MoveRandomly : MonoBehaviour
         float myY = gameObject.transform.position.y;
         float myZ = gameObject.transform.position.z;
 
-        float yPos = myY + Random.Range(myY - 100,myY + 100);
-        float zPos = myZ + Random.Range(myZ - 100,myZ + 100);
+        float yPos = myY + Random.Range(myY + 100,myY + 1000);
+        float zPos = myZ + Random.Range(myZ + 100,myZ + 1000);
 
         Target = new Vector3(gameObject.transform.position.x,yPos,zPos);
 
