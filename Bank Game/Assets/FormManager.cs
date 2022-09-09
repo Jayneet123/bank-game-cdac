@@ -170,6 +170,7 @@ public class FormManager : MonoBehaviour
         }
         // On the array index 1 we check whether the counter is 1, if yes scored accordingly
         if (submitIndex==1 && counter == 1){
+            Debug.Log("Done");
             addInfo.SetActive(false);
             speechBubble.SetActive(false);
             playerSS.SetActive(false);
