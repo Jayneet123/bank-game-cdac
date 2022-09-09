@@ -25,7 +25,8 @@ public class FormManager : MonoBehaviour
     public TMP_InputField addressInput;
     public TextMeshProUGUI email;
     public TMP_InputField emailInput;
-    public TMP_InputField phone;
+    public TMP_InputField phoneInput;
+    public TextMeshProUGUI phone;
     public TextMeshProUGUI fatherNamePAN;
     public TextMeshProUGUI fatherNameBirth;
     public TextMeshProUGUI panNumber;
@@ -41,6 +42,7 @@ public class FormManager : MonoBehaviour
     public int counter = 0;
     private string[] names = {"Rahul Ram Das","Ganesh Shyam Das","Mukund Gopal Das","Raj Shravan Das","Rohan Dev Das"};
     private string[] aadharNumbers = {"123456789012","111122223333","777788889999","555566668888","333322220000"};
+    private string[] phones = {"1234567890","1122223333","7777888999","5556668888","3332220000"};
     private string[] dobs = {"17/12/2001","16/05/1986","08/09/1977","31/10/2002","26/02/2001"};
     private string[] motherNames = {"Sita Ram Das","Radha Shyam Das","Paravti Gopal Das","Gopi Shravan Das","Varsha Dev Das"};
     private string[] fatherNames = {"Ram Das","Shyam Das","Gopal Das","Shravan Das","Dev Das"};
@@ -67,7 +69,7 @@ public class FormManager : MonoBehaviour
     public GameObject playerSS;
 
     private string[] submitDialogueSentences = {"Your form has been submitted succesfully"};
-    private float typingSpeed = 0.05f;
+    private float typingSpeed = 0.025f;
     private int submitIndex = 0;
     public GameObject continueButton;
 
@@ -99,11 +101,12 @@ public class FormManager : MonoBehaviour
         salary.text = salaries[j];
         address.text = addresses[j];
         email.text = emails[j];
+        phone.text = phones[j];
     }
     
     public void onSubmit(){
         // To start the dialogues after submitting the form
-        StartCoroutine(SubmitDialogue());
+        StartCoroutine(TypeSubmitDialogue());
         roboTutorialSpeech.SetActive(false);
         robo.SetActive(false);
         // All the docs disappear from the scene
@@ -111,6 +114,7 @@ public class FormManager : MonoBehaviour
         aadharAnimator.SetTrigger("Submit");
         panAnimator.SetTrigger("Submit");
         birthAnimator.SetTrigger("Submit");
+        addInfo.SetActive(false);
         // Open the speech bubble for submit
         speechBubbleAnimator.SetTrigger("Open");
         speechBubble.SetActive(true);
@@ -124,10 +128,10 @@ public class FormManager : MonoBehaviour
         if (salaryInput.text!=salaries[j]) errorPlace.Add("Salary");
         if (addressInput.text!=addresses[j]) errorPlace.Add("Address");
         if (emailInput.text!=emails[j]) errorPlace.Add("Email Address");
-        if (phone.text.Length != 10) errorPlace.Add("Phone Number");
+        if (phoneInput.text!=phones[j]) errorPlace.Add("Phone Number");
         
         // Checking if all the fields are correct, if yes counter incremented
-        if(nameInput.text==names[j]&&(aadharInput.text==aadharNumbers[j])&&(dobInput.text==dobs[j])&&(motherNameInput.text==motherNames[j])&&(phone.text.Length == 10)&&(salaryInput.text==salaries[j])&&(addressInput.text==addresses[j])&&(emailInput.text==emails[j])){
+        if(nameInput.text==names[j]&&(aadharInput.text==aadharNumbers[j])&&(dobInput.text==dobs[j])&&(motherNameInput.text==motherNames[j])&&(phone.text == phones[j])&&(salaryInput.text==salaries[j])&&(addressInput.text==addresses[j])&&(emailInput.text==emails[j])){
             counter++;
         }
     }
@@ -149,12 +153,12 @@ public class FormManager : MonoBehaviour
         addInfo.SetActive(false);
     }
     // Starting the coroutine of SubmitDialogue
-    private IEnumerator SubmitDialogue(){
-        speechBubbleAnimator.SetTrigger("Open");
-        speechBubble.SetActive(true);
-        yield return new WaitForSeconds(0.0f);
-        StartCoroutine(TypeSubmitDialogue());
-    }
+    // private IEnumerator SubmitDialogue(){
+    //     // speechBubbleAnimator.SetTrigger("Open");
+    //     // speechBubble.SetActive(true);
+    //     yield return new WaitForSeconds(0.0f);
+    //     StartCoroutine(TypeSubmitDialogue());
+    // }
     public IEnumerator TypeSubmitDialogue(){
         errorText.text = string.Empty;
         // The player has index 2 only if he has not answered eveything correctly
@@ -189,7 +193,7 @@ public class FormManager : MonoBehaviour
             foreach(char letter in submitDialogueSentences[submitIndex].ToCharArray())
             {
                 errorText.text += letter;
-                yield return new WaitForSeconds(typingSpeed);
+                yield return new WaitForSeconds(0.0f);
             }
             Debug.Log("W");
         }
