@@ -25,6 +25,7 @@ public class MovementAndAnimation : MonoBehaviour
     public GameObject newDialogueManager;
     public Canvas dialogueBackButton;
     public Canvas normalBackButton;
+    public GameObject canvasObject;
 
     //runs before the start function
     void Awake(){
@@ -97,6 +98,7 @@ public class MovementAndAnimation : MonoBehaviour
         if (hit.gameObject.CompareTag("Finish")){
             Debug.Log("Out of the area");
             // EditorUtility.DisplayDialog("Error! Going out of the play area","Please return to the play zone by pressing W","Ok","Cancel");
+            canvasObject.SetActive(true);
         }
     }
 }
