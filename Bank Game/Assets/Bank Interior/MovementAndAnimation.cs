@@ -26,6 +26,7 @@ public class MovementAndAnimation : MonoBehaviour
     public Canvas dialogueBackButton;
     public Canvas normalBackButton;
     public GameObject canvasObject;
+    public GameObject otherCamCanvas;
 
     //runs before the start function
     void Awake(){
@@ -94,6 +95,7 @@ public class MovementAndAnimation : MonoBehaviour
             newDialogueManager.SetActive(true);
             dialogueBackButton.enabled = true;
             normalBackButton.enabled = false;
+            otherCamCanvas.SetActive(true);
         }
         if (hit.gameObject.CompareTag("Finish")){
             Debug.Log("Out of the area");

@@ -129,4 +129,8 @@ public class NewDialogueManager : MonoBehaviour
     public void onBack(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
+    public void onFront(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
