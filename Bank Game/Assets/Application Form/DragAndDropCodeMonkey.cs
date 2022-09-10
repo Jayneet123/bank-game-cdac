@@ -37,7 +37,7 @@ public class DragAndDropCodeMonkey : MonoBehaviour , IPointerDownHandler , IBegi
     public void OnEndDrag(PointerEventData eventData){
         // Debug.Log("OnEndDrag");
         canvasGroup.alpha = 1f;
-        // canvasGroup.blocksRaycasts = false;
+        canvasGroup.blocksRaycasts = true;
     }
 
 }

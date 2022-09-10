@@ -131,7 +131,7 @@ public class FormManager : MonoBehaviour
         if (phoneInput.text!=phones[j]) errorPlace.Add("Phone Number");
         
         // Checking if all the fields are correct, if yes counter incremented
-        if(nameInput.text==names[j]&&(aadharInput.text==aadharNumbers[j])&&(dobInput.text==dobs[j])&&(motherNameInput.text==motherNames[j])&&(phone.text == phones[j])&&(salaryInput.text==salaries[j])&&(addressInput.text==addresses[j])&&(emailInput.text==emails[j])){
+        if(nameInput.text==names[j]&&(aadharInput.text==aadharNumbers[j])&&(dobInput.text==dobs[j])&&(motherNameInput.text==motherNames[j])&&(phoneInput.text == phones[j])&&(salaryInput.text==salaries[j])&&(addressInput.text==addresses[j])&&(emailInput.text==emails[j])){
             counter++;
         }
     }
