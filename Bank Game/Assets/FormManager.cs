@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class FormManager : MonoBehaviour
 {
+    public static int Score = 100;
     public TextMeshProUGUI aadhar;
     public TMP_InputField aadharInput;
     public TextMeshProUGUI nameAadhar;
@@ -58,6 +59,7 @@ public class FormManager : MonoBehaviour
     public GameObject try1;
     public GameObject try2;
     public GameObject try3;
+    public GameObject nextLevel;
     public GameObject fireworks;
 
     public GameObject aadharCard;
@@ -176,9 +178,19 @@ public class FormManager : MonoBehaviour
             playerSS.SetActive(false);
             roboTutorialSpeech.SetActive(false);
             fireworks.SetActive(true);
-            if(noOfTries==1) try1.SetActive(true);
-            if(noOfTries==2) try2.SetActive(true);
-            if(noOfTries==3) try3.SetActive(true);
+            nextLevel.SetActive(true);
+            if(noOfTries==1) {
+                try1.SetActive(true);
+                Score = 100;
+            }
+            if(noOfTries==2) {
+                try2.SetActive(true);
+                Score = 90;
+            }
+            if(noOfTries==3) {
+                try3.SetActive(true);
+                Score = 80;
+            }
         }
         // On array index 1 we check whether the counter is 0 if yes then errors are shown
         if (submitIndex==1 && counter == 0){
@@ -204,5 +216,9 @@ public class FormManager : MonoBehaviour
 
     public void TriggerTypeSubmitDialogue(){
         StartCoroutine(TypeSubmitDialogue());
+    }
+
+    public void NextLevel(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
