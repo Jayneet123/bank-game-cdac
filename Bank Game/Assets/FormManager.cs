@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class FormManager : MonoBehaviour
 {
-    public static int Score = 100;
+    public static int Score = 0;
     public TextMeshProUGUI aadhar;
     public TMP_InputField aadharInput;
     public TextMeshProUGUI nameAadhar;
@@ -71,7 +71,6 @@ public class FormManager : MonoBehaviour
     public GameObject playerSS;
 
     private string[] submitDialogueSentences = {"Your form has been submitted succesfully"};
-    private float typingSpeed = 0.025f;
     private int submitIndex = 0;
     public GameObject continueButton;
 
