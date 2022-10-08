@@ -6,7 +6,6 @@ using TMPro;
 public class FormRoboDialogueManager : MonoBehaviour
 {
     [SerializeField] private float typingSpeed = 0.05f;
-
     [SerializeField] private TextMeshProUGUI roboDialogueText;
     [SerializeField] private Animator roboSpeechBubbleAnimator;
     [SerializeField] private Animator roboAnimator;
@@ -40,7 +39,6 @@ public class FormRoboDialogueManager : MonoBehaviour
                 roboDialogueText.text += letter;
                 yield return new WaitForSeconds(typingSpeed);
             }
-            Debug.Log("W");
         }
         roboIndex++;
         roboContinueButton.SetActive(true);
