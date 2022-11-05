@@ -16,6 +16,7 @@ TagManager:
   - Email
   - Address
   - DOB
+  - Desk Level 1
   layers:
   - Default
   - TransparentFX

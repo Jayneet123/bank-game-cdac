@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class MovementAndAnimation : MonoBehaviour
 {
@@ -88,7 +89,8 @@ public class MovementAndAnimation : MonoBehaviour
         playerInput.CharacterControls.Disable();
     }   
     void OnControllerColliderHit(ControllerColliderHit hit){
-        if (hit.gameObject.CompareTag("Desk")){
+        if(FormManager.level1Complete == 0){
+        if (hit.gameObject.CompareTag("Desk Level 1")){
             mainCam.SetActive(false);
             cam2.SetActive(true);
             OnDisable();
@@ -96,7 +98,11 @@ public class MovementAndAnimation : MonoBehaviour
             dialogueBackButton.enabled = true;
             normalBackButton.enabled = false;
             otherCamCanvas.SetActive(true);
-        }
+        }}
+        else {
+        if (hit.gameObject.CompareTag("Desk Level 2")){
+            SceneManager.LoadScene("Cheque");
+        }}
         if (hit.gameObject.CompareTag("Finish")){
             Debug.Log("Out of the area");
             // EditorUtility.DisplayDialog("Error! Going out of the play area","Please return to the play zone by pressing W","Ok","Cancel");

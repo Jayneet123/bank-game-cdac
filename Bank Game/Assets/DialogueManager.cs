@@ -17,10 +17,15 @@ public class DialogueManager : MonoBehaviour
     private float speechBubbleAnimationDelay = 0.0f;
     private void Start()
     {
-        StartCoroutine(StartDialogue());
+        if (FormManager.level1Complete == 0){
+            StartCoroutine(StartLevel1Dialogue());
+        }
+        if (FormManager.level1Complete == 1){
+            Debug.Log("Done");
+        }
     }
 
-    private IEnumerator StartDialogue(){
+    private IEnumerator StartLevel1Dialogue(){
         roboSpeechBubbleAnimator.SetTrigger("Open");
         roboTutorialSpeechBubble.SetActive(true);
         yield return new WaitForSeconds(speechBubbleAnimationDelay);

@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 public class FormManager : MonoBehaviour
 {
     public static int Score = 0;
+    public static int level1Complete = 0;
     public TextMeshProUGUI aadhar;
     public TMP_InputField aadharInput;
     public TextMeshProUGUI nameAadhar;
@@ -218,6 +219,7 @@ public class FormManager : MonoBehaviour
     }
 
     public void NextLevel(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Start");
+        level1Complete++;
     }
 }
