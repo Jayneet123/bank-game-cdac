@@ -17,6 +17,7 @@ TagManager:
   - Address
   - DOB
   - Desk Level 1
+  - Desk Level 2
   layers:
   - Default
   - TransparentFX

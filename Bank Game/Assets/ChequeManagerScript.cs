@@ -6,6 +6,8 @@ using TMPro;
 public class ChequeManagerScript : MonoBehaviour
 {
     public TextMeshProUGUI score;
+    public GameObject try1;
+    public GameObject mail;
 
     public TextMeshProUGUI chequeName;
     public TMP_InputField chequeNameInput;
@@ -39,9 +41,14 @@ public class ChequeManagerScript : MonoBehaviour
     }
 
     public void onSubmitCheque(){
+        mail.SetActive(true);
         if((chequeNameInput.text==chequeNames[0])&&(dateInput.text==dates[0])&&(rupeeInput.text==rupees[0])&&(textRupeeInput.text==textRupees[0])&&(signInput.text==signs[0])){
             counter++;
-            Debug.Log("Success");
+            
         }
+    }
+
+    public void onMailClick(){
+        try1.SetActive(true);
     }
 }

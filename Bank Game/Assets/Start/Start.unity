@@ -1603,6 +1603,10 @@ MonoBehaviour:
   roboDialogueSentences:
   - Hey, My name is Mr.Robo. I will guide you through the basics of banking
   - Press W to move forward and reach the door of the bank to enter. See you there...
+  roboDialogueSentences1:
+  - After opening a bank account, now its time to transfer money from our account
+    using a cheque.
+  - Enter the bank to fill and deposit the cheque.
   roboContinueButton: {fileID: 4249891}
   roboTutorialSpeechBubble: {fileID: 774031244}
 --- !u!4 &1991494256

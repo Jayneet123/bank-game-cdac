@@ -28,6 +28,7 @@ public class MovementAndAnimation : MonoBehaviour
     public Canvas normalBackButton;
     public GameObject canvasObject;
     public GameObject otherCamCanvas;
+    public GameObject wrongDesk;
 
     //runs before the start function
     void Awake(){
@@ -90,19 +91,32 @@ public class MovementAndAnimation : MonoBehaviour
     }   
     void OnControllerColliderHit(ControllerColliderHit hit){
         if(FormManager.level1Complete == 0){
-        if (hit.gameObject.CompareTag("Desk Level 1")){
-            mainCam.SetActive(false);
-            cam2.SetActive(true);
-            OnDisable();
-            newDialogueManager.SetActive(true);
-            dialogueBackButton.enabled = true;
-            normalBackButton.enabled = false;
-            otherCamCanvas.SetActive(true);
-        }}
-        else {
-        if (hit.gameObject.CompareTag("Desk Level 2")){
-            SceneManager.LoadScene("Cheque");
-        }}
+            if (hit.gameObject.CompareTag("Desk Level 1")){
+                mainCam.SetActive(false);
+                cam2.SetActive(true);
+                OnDisable();
+                newDialogueManager.SetActive(true);
+                dialogueBackButton.enabled = true;
+                normalBackButton.enabled = false;
+                otherCamCanvas.SetActive(true);
+            }
+            else {
+                if (hit.gameObject.CompareTag("Desk Level 2")){
+                    wrongDesk.SetActive(true);
+                }
+            }
+        }
+        if(FormManager.level1Complete == 1){
+            if (hit.gameObject.CompareTag("Desk Level 1")){
+                wrongDesk.SetActive(true);
+            }
+            else {
+                if (hit.gameObject.CompareTag("Desk Level 2")){
+                    OnDisable();
+                    SceneManager.LoadScene("Cheque");
+                }
+            }
+        }
         if (hit.gameObject.CompareTag("Finish")){
             Debug.Log("Out of the area");
             // EditorUtility.DisplayDialog("Error! Going out of the play area","Please return to the play zone by pressing W","Ok","Cancel");

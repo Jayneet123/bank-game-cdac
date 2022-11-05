@@ -11,21 +11,17 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Animator roboSpeechBubbleAnimator;
     [SerializeField] private Animator roboAnimator;
     [SerializeField] private string[] roboDialogueSentences;
+    [SerializeField] private string[] roboDialogueSentences1;
     [SerializeField] private GameObject roboContinueButton;
     [SerializeField] private GameObject roboTutorialSpeechBubble;
-    private int roboIndex;
+    private int roboIndex = 0;
     private float speechBubbleAnimationDelay = 0.0f;
     private void Start()
     {
-        if (FormManager.level1Complete == 0){
-            StartCoroutine(StartLevel1Dialogue());
-        }
-        if (FormManager.level1Complete == 1){
-            Debug.Log("Done");
-        }
+        StartCoroutine(StartDialogue());  
     }
 
-    private IEnumerator StartLevel1Dialogue(){
+    private IEnumerator StartDialogue(){
         roboSpeechBubbleAnimator.SetTrigger("Open");
         roboTutorialSpeechBubble.SetActive(true);
         yield return new WaitForSeconds(speechBubbleAnimationDelay);
@@ -40,12 +36,22 @@ public class DialogueManager : MonoBehaviour
         }
         if(roboIndex < roboDialogueSentences.Length){
             roboContinueButton.SetActive(false);
-            foreach(char letter in roboDialogueSentences[roboIndex].ToCharArray())
-            {
-                roboDialogueText.text += letter;
-                yield return new WaitForSeconds(typingSpeed);
+            if (FormManager.level1Complete == 0){
+                foreach(char letter in roboDialogueSentences[roboIndex].ToCharArray())
+                {   
+                    roboDialogueText.text += letter;
+                    yield return new WaitForSeconds(typingSpeed);
+                }
             }
-            Debug.Log("W");
+            if (FormManager.level1Complete == 1){
+                foreach(char letter in roboDialogueSentences1[roboIndex].ToCharArray())
+                {   
+                    roboDialogueText.text += letter;
+                    yield return new WaitForSeconds(typingSpeed);
+                }
+            }
+            
+            //Debug.Log("W");
         }
         roboIndex++;
         roboContinueButton.SetActive(true);
