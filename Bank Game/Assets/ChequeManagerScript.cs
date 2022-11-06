@@ -46,9 +46,13 @@ public class ChequeManagerScript : MonoBehaviour
             counter++;
             
         }
+       
     }
 
     public void onMailClick(){
-        try1.SetActive(true);
+        // try1.SetActive(true);
+        if(counter==0){
+            
+        }
     }
 }

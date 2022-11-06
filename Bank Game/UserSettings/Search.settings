@@ -13,7 +13,7 @@ scopes = {
 	"last_search.DA949528" = "packages"
 	"OpenInspectorPreview.DA949528" = "0"
 	"currentGroup.DA949528" = "all"
-	"last_search.EAB0C2BA" = "AI navigation package"
+	"last_search.EAB0C2BA" = "sprite emoji"
 	"OpenInspectorPreview.EAB0C2BA" = "0"
 	"currentGroup.EAB0C2BA" = "all"
 }
@@ -62,6 +62,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"e"
 	"p"
 	"t:Prefab"
 ]
