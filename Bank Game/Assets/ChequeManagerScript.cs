@@ -25,18 +25,21 @@ public class ChequeManagerScript : MonoBehaviour
 
     public int counter=0;
 
-    private string[] chequeNames = {"John Shah"};
-    private string[] dates = {"01/10/2022"};
-    private string[] rupees = {"50,000"};
-    private string[] textRupees = {"Fifty Thousand only/-"};
-    private string[] signs = {"JShah."};
+    private string[] chequeNames = {"John Shah","Jack Das","Raj Tomar","Riya Shah","Alice Gupta"};
+    private string[] dates = {"01/10/2022","02/02/2022","30/04/2022","21/08/2022","31/10/2022"};
+    private string[] rupees = {"50,000/-","30,000/-","28,000/-","80,000/-","20,000/-"};
+    private string[] textRupees = {"Fifty Thousand only/-","Thirty Thousand only/-","Twenty Eight Thousand only/-","Eighty Thousand only/-","Twenty Thousand only/-"};
+    private string[] signs = {"JShah.","JDas.","RTomar.","RShah.","AGupta."};
+    public int j ;
     
     void Awake(){
-        chequeName.text = chequeNames[0];
-        date.text = dates[0];
-        rupee.text = rupees[0];
-        textRupee.text = textRupees[0];
-        sign.text = signs[0];
+        int i = Random.Range(0,5);
+        j=i;
+        chequeName.text = chequeNames[i];
+        date.text = dates[i];
+        rupee.text = rupees[i];
+        textRupee.text = textRupees[i];
+        sign.text = signs[i];
     }
     void Start()
     {
