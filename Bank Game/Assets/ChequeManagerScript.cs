@@ -48,7 +48,7 @@ public class ChequeManagerScript : MonoBehaviour
 
     public void onSubmitCheque(){
         mail.SetActive(true);
-        if((chequeNameInput.text==chequeNames[0])&&(dateInput.text==dates[0])&&(rupeeInput.text==rupees[0])&&(textRupeeInput.text==textRupees[0])&&(signInput.text==signs[0])){
+        if((chequeNameInput.text==chequeNames[j])&&(dateInput.text==dates[j])&&(rupeeInput.text==rupees[j])&&(textRupeeInput.text==textRupees[j])&&(signInput.text==signs[j])){
             counter++;
         }
         Debug.Log("Success");

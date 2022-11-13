@@ -54,7 +54,7 @@ public class FormManager : MonoBehaviour
     private string[] years = {"2001","1986","1977","2002","2001"};
     private string[] salaries = {"20,000","30,000","40,000","35,000","50,000"};
     private string[] emails = {"rahul123@gmail.com","ganesh123@gmail.com","mukund123@gmail.com","raj123@gmail.com","rohan123@gmail.com"};
-    private string[] addresses = {"31  Bhiku Building st Floor V.s.marg Prabhadevi, Mumbai, Maharashtra,400025,India","45  Chord Road Rajajinagar, Bangalore, Karnataka,560022,India","Nutan Prasad Society Nutan Prasad Society Ideal Colony Near Rupee Co-op Bankkothrud Paudroad, Pune, Maharashtra,411029,India","94  Royapettah High Rd Mylapore, Chennai, Tamil Nadu,600004,India","36  Anand Sagar Nr Amar Gyan Estate Thane , Mumbai, Maharashtra,400607,India"};
+    private string[] addresses = {"31 Bhiku Building Floor V.s.marg Prabhadevi, Mumbai, Maharashtra,400025,India","45  Chord Road Rajajinagar, Bangalore, Karnataka,560022,India","Nutan Prasad Society Near Co-op Bankkothrud Paudroad, Pune, Maharashtra,411029,India","94  Royapettah High Rd Mylapore, Chennai, Tamil Nadu,600004,India","36  Anand Sagar Nr Amar Gyan Estate Thane , Mumbai, Maharashtra,400607,India"};
     public int j ;
 
     public GameObject try1;

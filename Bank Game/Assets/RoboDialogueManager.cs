@@ -23,12 +23,14 @@ public class RoboDialogueManager : MonoBehaviour
     }
 
     private IEnumerator StartDialogue(){
+        
         roboSpeechBubbleAnimator.SetTrigger("Open");
         roboTutorialSpeechBubble.SetActive(true);
         yield return new WaitForSeconds(speechBubbleAnimationDelay);
         StartCoroutine(TypeRoboDialogue());
     }
     public IEnumerator TypeRoboDialogue(){
+        roboAnimator.SetTrigger("isStarted");
         roboDialogueText.text = string.Empty;
         if(roboIndex==3||roboIndex1 == 1){
             roboSpeechBubbleAnimator.SetTrigger("Close");
