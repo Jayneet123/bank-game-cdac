@@ -84,8 +84,10 @@ public class FormManager : MonoBehaviour
     List <string> errorPlace = new List<string>();
     
     static int noOfTries=1;
+    
 
     private void Awake() {
+        PlayerPrefs.SetInt("level",1);
         int i = Random.Range(0,5);
         j=i;
         nameAadhar.text = names[i];
