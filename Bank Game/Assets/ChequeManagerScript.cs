@@ -33,6 +33,7 @@ public class ChequeManagerScript : MonoBehaviour
     public int j ;
     
     void Awake(){
+        PlayerPrefs.SetInt("level",2);
         int i = Random.Range(0,5);
         j=i;
         chequeName.text = chequeNames[i];

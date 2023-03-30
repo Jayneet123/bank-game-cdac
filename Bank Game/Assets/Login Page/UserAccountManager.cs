@@ -17,6 +17,7 @@ public class UserAccountManager : MonoBehaviour
     public static UserAccountManager Instance;
     public TextMeshProUGUI errorType;
     public GameObject panel;
+    public int currentLevel;
 
     void Awake(){
         Instance = this;
@@ -50,7 +51,17 @@ public class UserAccountManager : MonoBehaviour
         },
         result => {
                 Debug.Log($"Successful Account Login for {username}");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                currentLevel = PlayerPrefs.GetInt("level");
+                if(currentLevel == 1){
+                    SceneManager.LoadScene("Application Form");
+                }
+                if(currentLevel == 2){
+                    SceneManager.LoadScene("Cheque");
+                }
+                else{
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                
             },
         error => {
                 panel.SetActive(true);
