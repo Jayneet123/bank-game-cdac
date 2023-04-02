@@ -38,6 +38,7 @@ public class UserAccountManager : MonoBehaviour
                 signIn.enabled = true;
             },
             error => {
+                Debug.Log(error);
                 panel.SetActive(true);
                 errorType.text = $"Unsuccessful Account Creation for {username} \nPlease check that email should be from A to Z , 0 to 9 without dot and password between 0 to 9 characters";
             }
@@ -52,14 +53,19 @@ public class UserAccountManager : MonoBehaviour
         result => {
                 Debug.Log($"Successful Account Login for {username}");
                 currentLevel = PlayerPrefs.GetInt("level");
+                Debug.Log(currentLevel);
                 if(currentLevel == 1){
                     SceneManager.LoadScene("Application Form");
                 }
                 if(currentLevel == 2){
                     SceneManager.LoadScene("Cheque");
                 }
+                if(currentLevel == 0){
+                    SceneManager.LoadScene("Start");
+                }
                 else{
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    Debug.Log("Error");
+                    // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 
             },
@@ -76,6 +82,6 @@ public class UserAccountManager : MonoBehaviour
 
     public void onSignInButtonClick(){
         counter++;
-        Debug.Log(counter);
+        // Debug.Log(counter);
     }
 }
