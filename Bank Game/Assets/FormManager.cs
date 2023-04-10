@@ -75,6 +75,7 @@ public class FormManager : MonoBehaviour
     private int submitIndex = 0;
     public GameObject continueButton;
 
+
     public Animator speechBubbleAnimator;
     public Animator submitAnimator;
     public Animator aadharAnimator;
@@ -223,5 +224,6 @@ public class FormManager : MonoBehaviour
     public void NextLevel(){
         SceneManager.LoadScene("Start");
         level1Complete++;
+        UserAccountManager.currentLevel=2;
     }
 }
