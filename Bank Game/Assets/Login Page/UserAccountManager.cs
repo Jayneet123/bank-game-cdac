@@ -83,4 +83,8 @@ public class UserAccountManager : MonoBehaviour
         counter++;
         // Debug.Log(counter);
     }
+    public void deleteData(){
+        PlayerPrefs.DeleteKey("level");
+        Debug.Log("1");
+    }
 }
