@@ -56,9 +56,6 @@ public class UserAccountManager : MonoBehaviour
                 currentLevel = PlayerPrefs.GetInt("level");
                 Debug.Log(currentLevel);
                 if(currentLevel == 1){
-                    SceneManager.LoadScene("Application Form");
-                }
-                if(currentLevel == 2){
                     FormManager.level1Complete = 1;
                     SceneManager.LoadScene("Start");
                 }

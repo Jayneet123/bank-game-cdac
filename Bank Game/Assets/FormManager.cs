@@ -224,6 +224,7 @@ public class FormManager : MonoBehaviour
     public void NextLevel(){
         SceneManager.LoadScene("Start");
         level1Complete++;
-        UserAccountManager.currentLevel=2;
+        PlayerPrefs.SetInt("level",1);
+        // UserAccountManager.currentLevel=1;
     }
 }
