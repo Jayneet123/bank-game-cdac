@@ -29,7 +29,7 @@ public class ChequeManagerScript : MonoBehaviour
     private string[] dates = {"01/10/2022","02/02/2022","30/04/2022","21/08/2022","31/10/2022"};
     private string[] rupees = {"50,000/-","30,000/-","28,000/-","80,000/-","20,000/-"};
     private string[] textRupees = {"Fifty Thousand only/-","Thirty Thousand only/-","Twenty Eight Thousand only/-","Eighty Thousand only/-","Twenty Thousand only/-"};
-    private string[] signs = {"JShah.","JDas.","RTomar.","RShah.","AGupta."};
+    private string[] signs = {"RTomar.","RShah","DDoshi.","MGupta.","AGupta."};
     public int j ;
     
     void Awake(){
