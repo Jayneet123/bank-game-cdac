@@ -23,6 +23,8 @@ public class ChequeManagerScript : MonoBehaviour
     public TextMeshProUGUI sign;
     public TMP_InputField signInput;
 
+    public TextMeshProUGUI desc;
+
     public int counter=0;
 
     private string[] chequeNames = {"John Shah","Jack Das","Raj Tomar","Riya Shah","Alice Gupta"};
@@ -30,6 +32,7 @@ public class ChequeManagerScript : MonoBehaviour
     private string[] rupees = {"50,000/-","30,000/-","28,000/-","80,000/-","20,000/-"};
     private string[] textRupees = {"Fifty Thousand only/-","Thirty Thousand only/-","Twenty Eight Thousand only/-","Eighty Thousand only/-","Twenty Thousand only/-"};
     private string[] signs = {"RTomar.","RShah","DDoshi.","MGupta.","AGupta."};
+    private string[] descriptions = {"Additional Information\n\n\nYou are Ramesh Tomar.\nYou are writing a cheque to John Shah to pay a sum of 50000 rupees on the date 01/10/2022.\nYou are transferring the money from a/c no: IDIB000K023 to a/c no: DDIC000M057.\nYou live in Malad West, Mumbai, Maharshtra.\nPlease fill the reciept to complete the cheque deposit.","Additional Information\n\n\nYou are Ramesh Shah.\nYou are writing a cheque to Jack Das to pay a sum of 30000 rupees on the date 02/02/2022.\nYou are transferring the money from a/c no: IDIB000K023 to a/c no: DDIC000M057.\nYou live in Malad West, Mumbai, Maharshtra.\nPlease fill the reciept to complete the cheque deposit.","Additional Information\n\n\nYou are Dinesh Doshi.\nYou are writing a cheque to Raj Tomar to pay a sum of 28000 rupees on the date 30/04/2022.\nYou are transferring the money from a/c no: IDIB000K023 to a/c no: DDIC000M057.\nYou live in Malad West, Mumbai, Maharshtra.\nPlease fill the reciept to complete the cheque deposit.","Additional Information\n\n\nYou are Manish Gupta.\nYou are writing a cheque to Riya Shah to pay a sum of 80000 rupees on the date 21/08/2022.\nYou are transferring the money from a/c no: IDIB000K023 to a/c no: DDIC000M057.\nYou live in Malad West, Mumbai, Maharshtra.\nPlease fill the reciept to complete the cheque deposit.","Additional Information\n\n\nYou are Akash Gupta.\nYou are writing a cheque to Alice Gupta to pay a sum of 20000 rupees on the date 31/10/2022.\nYou are transferring the money from a/c no: IDIB000K023 to a/c no: DDIC000M057.\nYou live in Malad West, Mumbai, Maharshtra.\nPlease fill the reciept to complete the cheque deposit.",};
     public int j ;
     
     void Awake(){
@@ -41,6 +44,7 @@ public class ChequeManagerScript : MonoBehaviour
         rupee.text = rupees[i];
         textRupee.text = textRupees[i];
         sign.text = signs[i];
+        desc.text = descriptions[i];
     }
     void Start()
     {
