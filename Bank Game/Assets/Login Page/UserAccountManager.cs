@@ -60,7 +60,7 @@ public class UserAccountManager : MonoBehaviour
                     SceneManager.LoadScene("Start");
                 }
                 if(currentLevel == 0){
-                    SceneManager.LoadScene("Start");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 else{
                     Debug.Log("Error");
@@ -81,7 +81,7 @@ public class UserAccountManager : MonoBehaviour
 
     public void onSignInButtonClick(){
         counter++;
-        // Debug.Log(counter);
+        Debug.Log(counter);
     }
     public void deleteData(){
         PlayerPrefs.DeleteKey("level");
