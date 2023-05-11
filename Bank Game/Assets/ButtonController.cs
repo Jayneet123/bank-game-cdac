@@ -12,7 +12,8 @@ public class ButtonController : MonoBehaviour
     // Update is called once per frame
     public void ValueWhenButtonClicked()
     {
-        if(input.text.Length<5)
+        if(input.text.Length<4)
         input.text += buttonText.text;
     }
+
 }

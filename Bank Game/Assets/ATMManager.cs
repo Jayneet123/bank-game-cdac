@@ -34,6 +34,7 @@ public class ATMManager : MonoBehaviour
         background.SetActive(false);
         atm.SetActive(true);
         creditCard.SetActive(true);
+        insertCard.SetActive(true);
     }
 
     public void onCardClick(){
@@ -42,9 +43,19 @@ public class ATMManager : MonoBehaviour
         insertCard.SetActive(false);
     }
 
-    public void forPin(){
-        while(inputPin.text.Length<5){
-            this.Button.text += inputPin.text;
-        }
+    public void ClearScreen(){
+        string emptyText= "";
+        inputPin.text = emptyText;
+    }
+
+    public IEnumerator EnterClick(){
+        insertPin.SetActive(false);
+        processing.SetActive(true);
+        yield return new WaitForSeconds(3);
+        accountType.SetActive(true);
+    }
+
+    public void onEnterClick(){
+        StartCoroutine(EnterClick());
     }
 }
