@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ATMManager : MonoBehaviour
 {
@@ -15,6 +15,9 @@ public class ATMManager : MonoBehaviour
     //ATM Working
     public Animator cardAnimator;
     public Animator noteAnimator;
+
+    public Canvas endCanvas;
+
     public GameObject insertCard;
     public GameObject insertPin;
     public GameObject cashDeposit;
@@ -32,7 +35,8 @@ public class ATMManager : MonoBehaviour
     void Start()
     {
         atmModel.SetActive(true);
-        background.SetActive(true);        
+        background.SetActive(true);    
+        endCanvas.enabled=false;    
     }
 
     public void onAtmEnter(){
@@ -70,6 +74,10 @@ public class ATMManager : MonoBehaviour
                 //Animation
                 note.SetActive(true);
                 noteAnimator.SetTrigger("isWithdrawn");
+                creditCard.SetActive(true);
+                cardAnimator.SetTrigger("remove");
+                yield return new WaitForSeconds(2);
+                endCanvas.enabled = true;
             }
     }
 
@@ -86,5 +94,9 @@ public class ATMManager : MonoBehaviour
 
     public void onSideClick(){
         StartCoroutine(onSideButtonClick());
+    }
+
+    public void onEndClick(){
+        SceneManager.LoadScene("Start");
     }
 }

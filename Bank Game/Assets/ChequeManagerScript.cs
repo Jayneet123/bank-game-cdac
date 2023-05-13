@@ -101,7 +101,7 @@ public class ChequeManagerScript : MonoBehaviour
     }
 
     public void onSuccessContinue(){
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("ATM");
     }
     public void onFailContinue(){
         FormManager.Score -= 10;
