@@ -62,6 +62,9 @@ public class UserAccountManager : MonoBehaviour
                 if(currentLevel == 0){
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
+                if(currentLevel == 2){
+                    SceneManager.LoadScene("ATM");
+                }
                 else{
                     Debug.Log("Error");
                     // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

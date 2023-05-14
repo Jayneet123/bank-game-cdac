@@ -88,7 +88,7 @@ public class FormManager : MonoBehaviour
     
 
     private void Awake() {
-        PlayerPrefs.SetInt("level",1);
+        // PlayerPrefs.SetInt("level",1);
         int i = Random.Range(0,5);
         j=i;
         nameAadhar.text = names[i];

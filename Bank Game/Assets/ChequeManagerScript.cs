@@ -101,6 +101,7 @@ public class ChequeManagerScript : MonoBehaviour
     }
 
     public void onSuccessContinue(){
+        PlayerPrefs.SetInt("level",2);
         SceneManager.LoadScene("ATM");
     }
     public void onFailContinue(){
