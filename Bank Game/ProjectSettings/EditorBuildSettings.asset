@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cheque/Cheque.unity
     guid: 50400152d24c10e4ca545dc2604b7b56
+  - enabled: 1
+    path: Assets/ATM/ATM.unity
+    guid: b192e9a71e706f942b08a85bdb64b3fa
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
